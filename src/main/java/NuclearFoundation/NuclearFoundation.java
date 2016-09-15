@@ -21,6 +21,7 @@ public class NuclearFoundation {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e){
+		Test.init();
 		
 	}
 	@EventHandler
