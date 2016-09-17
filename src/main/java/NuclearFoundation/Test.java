@@ -7,10 +7,13 @@ import NuclearFoundation.items.ItemBasicPick;
 import NuclearFoundation.items.ItemBasicShears;
 import NuclearFoundation.items.ItemBasicShovel;
 import NuclearFoundation.items.ItemBasicSword;
+import NuclearFoundation.items.ItemComplexComponent;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class Test {
 	
@@ -24,6 +27,7 @@ public class Test {
 	public static ItemBasicArmor chest=new ItemBasicArmor(ArmorMaterial.CHAIN, 1, EntityEquipmentSlot.CHEST, "Test");
 	public static ItemBasicArmor legs=new ItemBasicArmor(ArmorMaterial.CHAIN, 2, EntityEquipmentSlot.LEGS, "Test");
 	public static ItemBasicArmor feet=new ItemBasicArmor(ArmorMaterial.CHAIN, 3, EntityEquipmentSlot.FEET, "Test");
+	public static ItemComplexComponent ingot=new ItemComplexComponent("ingot");
 	public static void init(){
 		testpick.initModel();
 		GameRegistry.register(testpick);
@@ -45,7 +49,14 @@ public class Test {
 		GameRegistry.register(legs);
 		feet.initModel();
 		GameRegistry.register(feet);
-		
+		//
+		ingot.Metal.add("Iron");
+		ingot.Metal.add("Gold");
+		ingot.Metal.add("Test");
+		for(int i=0;i<ingot.Metal.size();i++)
+			OreDictionary.registerOre(ingot.Type+ingot.Metal.get(i), new ItemStack(ingot, 1, i));
+		ingot.initModel();
+		GameRegistry.register(ingot);
 	}
  	
 }
