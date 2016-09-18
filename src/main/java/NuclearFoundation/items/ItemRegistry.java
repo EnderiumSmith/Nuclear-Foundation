@@ -1,6 +1,7 @@
 package NuclearFoundation.items;
 
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -11,7 +12,7 @@ public class ItemRegistry {
 	public static void initItems(){
 		//real metals{
 			//5-Boron TODO add tools-armor
-			ItemManager.addMaterial("Boron", null, null);
+			ItemManager.addMaterial("Boron", ToolMaterial.DIAMOND, ArmorMaterial.DIAMOND);
 			//6-Carbon TODO
 			//13-Aluminium TODO crafting
 			ItemManager.addMaterial("Aluminium", null, null);
@@ -29,10 +30,8 @@ public class ItemRegistry {
 			ItemManager.addMaterial("Copper", null, null);
 			//30-Zinc
 			ItemManager.addMaterial("Zinc", null, null);
-			//33-Arsenic TODO
-			ItemManager.addMaterial("Arsenic", null, null);
 			//40-Zirconium TODO
-			ItemManager.addMaterial("Zirconium", null, null);
+			ItemManager.addMaterial("Zirconium", ToolMaterial.IRON, ArmorMaterial.IRON);
 			//47-Silver TODO
 			ItemManager.addMaterial("Silver", null, null);
 			//50-Tin
