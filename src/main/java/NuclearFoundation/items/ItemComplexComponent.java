@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class ItemComplexComponent extends Item{
 	
@@ -23,7 +24,7 @@ public class ItemComplexComponent extends Item{
 		this.Metal=new ArrayList<String>();
 		this.setRegistryName(this.Type);
 		this.setUnlocalizedName(this.getRegistryName().toString());
-		this.setCreativeTab(CreativeTabs.MATERIALS);
+		this.setCreativeTab(CustomCreativeTabs.TabMaterials);
 	}
 	
 	@Override
@@ -48,6 +49,11 @@ public class ItemComplexComponent extends Item{
 			if(this.Metal.get(i).equals(metal))
 				return i;
 		return -1;
+	}
+	public void registerOreDict(){
+		for(int i=0;i<this.Metal.size();i++){
+			OreDictionary.registerOre(this.Type+this.Metal.get(i), new ItemStack(this, 1, i));
+		}
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel(){

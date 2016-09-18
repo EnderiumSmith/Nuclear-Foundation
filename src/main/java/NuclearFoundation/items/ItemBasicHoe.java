@@ -15,6 +15,7 @@ public class ItemBasicHoe extends ItemHoe{
 		this.Type=type;
 		this.setRegistryName("hoe"+type);
 		this.setUnlocalizedName(this.getRegistryName().toString());
+		this.setCreativeTab(CustomCreativeTabs.TabTools);
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel(){

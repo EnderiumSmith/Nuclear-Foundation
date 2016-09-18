@@ -15,6 +15,7 @@ public class ItemBasicShovel extends ItemSpade{
 		this.Type=type;
 		this.setRegistryName("shovel"+this.Type);
 		this.setUnlocalizedName(this.getRegistryName().toString());
+		this.setCreativeTab(CustomCreativeTabs.TabTools);
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel(){

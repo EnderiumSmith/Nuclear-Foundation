@@ -11,11 +11,21 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemManager {
 	
 	public static final ItemComplexComponent Ingot=new ItemComplexComponent("ingot");
+	public static final ItemComplexComponent Dust=new ItemComplexComponent("dust");
+	public static final ItemComplexComponent Nugget=new ItemComplexComponent("nugget");
+	public static final ItemComplexComponent Gear=new ItemComplexComponent("gear");
+	public static final ItemComplexComponent Plate=new ItemComplexComponent("plate");
+	public static final ItemComplexComponent Rod=new ItemComplexComponent("rod");
 	public static final ArrayList<SetTools> Tools=new ArrayList<SetTools>();
 	public static final ArrayList<SetArmor> Armor=new ArrayList<SetArmor>();
 	
 	public static void addMaterial(String type,ToolMaterial toolMat,ArmorMaterial armorMat){
 		Ingot.Metal.add(type);
+		Dust.Metal.add(type);
+		Nugget.Metal.add(type);
+		Gear.Metal.add(type);
+		Plate.Metal.add(type);
+		Rod.Metal.add(type);
 		if(toolMat!=null){
 			Tools.add(new SetTools(type, toolMat));
 		}
@@ -26,6 +36,11 @@ public class ItemManager {
 	@SideOnly(Side.CLIENT)
 	public static void initModel(){
 		Ingot.initModel();
+		Dust.initModel();
+		Nugget.initModel();
+		Gear.initModel();
+		Plate.initModel();
+		Rod.initModel();
 		int i;
 		for(i=0;i<Tools.size();i++){
 			Tools.get(i).initModel();
@@ -36,6 +51,11 @@ public class ItemManager {
 	}
 	public static void registerItems(){
 		GameRegistry.register(Ingot);
+		GameRegistry.register(Dust);
+		GameRegistry.register(Nugget);
+		GameRegistry.register(Gear);
+		GameRegistry.register(Plate);
+		GameRegistry.register(Rod);
 		int i;
 		for(i=0;i<Tools.size();i++){
 			Tools.get(i).registerItems();
@@ -43,5 +63,13 @@ public class ItemManager {
 		for(i=0;i<Armor.size();i++){
 			Armor.get(i).registerItems();
 		}
+	}
+	public static void registerOreDict(){
+		Ingot.registerOreDict();
+		Dust.registerOreDict();
+		Nugget.registerOreDict();
+		Gear.registerOreDict();
+		Plate.registerOreDict();
+		Rod.registerOreDict();
 	}
 }

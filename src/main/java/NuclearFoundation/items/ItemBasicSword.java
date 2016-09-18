@@ -15,6 +15,7 @@ public class ItemBasicSword extends ItemSword{
 		this.Type=type;
 		this.setRegistryName("sword"+type);
 		this.setUnlocalizedName(this.getRegistryName().toString());
+		this.setCreativeTab(CustomCreativeTabs.TabTools);
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel(){

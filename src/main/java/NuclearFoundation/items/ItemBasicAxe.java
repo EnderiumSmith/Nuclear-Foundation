@@ -15,6 +15,7 @@ public class ItemBasicAxe extends ItemAxe{
 		this.Type=type;
 		this.setRegistryName("axe"+this.Type);
 		this.setUnlocalizedName(this.getRegistryName().toString());
+		this.setCreativeTab(CustomCreativeTabs.TabTools);
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel(){

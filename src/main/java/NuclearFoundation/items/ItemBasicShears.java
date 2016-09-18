@@ -16,6 +16,7 @@ public class ItemBasicShears extends ItemShears{
 		this.Type=type;
 		this.setRegistryName("shears"+type);
 		this.setUnlocalizedName(this.getRegistryName().toString());
+		this.setCreativeTab(CustomCreativeTabs.TabTools);
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel(){

@@ -33,6 +33,7 @@ public class ItemBasicArmor extends ItemArmor{
 			this.setRegistryName("boots"+this.Type);
 			this.setUnlocalizedName(this.getRegistryName().toString());
 		}
+		this.setCreativeTab(CustomCreativeTabs.TabArmor);
 	}
 	@SideOnly(Side.CLIENT)
 	@Override
