@@ -23,13 +23,14 @@ public class ItemComplexComponent extends Item{
 		this.Metal=new ArrayList<String>();
 		this.setRegistryName(this.Type);
 		this.setUnlocalizedName(this.getRegistryName().toString());
+		this.setCreativeTab(CreativeTabs.MATERIALS);
 	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
 		if(this.Metal.isEmpty()||stack.getItemDamage()>=this.Metal.size()||stack.getItemDamage()<0)
 			return this.getUnlocalizedName();
-		return "item."+Constants.MODID+":"+this.Metal.get(stack.getItemDamage())+this.Type;
+		return "item."+Constants.MODID+":"+this.Type+this.Metal.get(stack.getItemDamage());
 	}
 	@Override
 	public void getSubItems(Item itemIn, CreativeTabs tab, List<ItemStack> subItems) {
