@@ -58,7 +58,11 @@ public class ItemComplexComponent extends Item{
 	@SideOnly(Side.CLIENT)
 	public void initModel(){
 		for(int i=0;i<this.Metal.size();i++){
-			ModelLoader.setCustomModelResourceLocation(this, i, new ModelResourceLocation(Constants.MODID+":material/"+this.Metal.get(i)+"/"+this.Type));
+			ModelLoader.setCustomModelResourceLocation(this, i, new ModelResourceLocation(Constants.MODID+":material/"+this.Type));
 		}
+	}
+	@SideOnly(Side.CLIENT)
+	public void initModel(int i){
+		ModelLoader.setCustomModelResourceLocation(this, i, new ModelResourceLocation(Constants.MODID+":material/"+this.Metal.get(i)+"/"+this.Type));
 	}
 }
