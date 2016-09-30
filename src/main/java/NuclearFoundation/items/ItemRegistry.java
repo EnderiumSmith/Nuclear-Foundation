@@ -1,51 +1,50 @@
 package NuclearFoundation.items;
 
+import NuclearFoundation.core.ArmorMaterials;
+import NuclearFoundation.core.ToolMaterials;
 import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemRegistry {
 	
-	public static ItemBasicShears gold;
 	public static void initItems(){
 		//real metals{
 			//5-B
-			ItemManager.addMaterial("Boron", ToolMaterial.DIAMOND, ArmorMaterial.DIAMOND);
+			ItemManager.addMaterial("Boron", ToolMaterials.Boron, ArmorMaterials.Boron);
 			//6-Carbon TODO
 			//13-Al
 			ItemManager.addMaterial("Aluminium", null, null);
 			//22-Ti
-			ItemManager.addMaterial("Titanium", null, null);
+			ItemManager.addMaterial("Titanium", ToolMaterials.Titanium, ArmorMaterials.Titanium);
 			//24-Cr
 			ItemManager.addMaterial("Cromium", null, null);
 			//26-Fe
-			ItemManager.addMaterial("Iron", null, null);
+			ItemManager.addMaterial("Iron", ToolMaterials.Iron2, ArmorMaterials.Iron2);
 			//27-Co
 			ItemManager.addMaterial("Cobalt", null, null);
 			//28-Ni
 			ItemManager.addMaterial("Nickel", null, null);
 			//29-Cu
-			ItemManager.addMaterial("Copper", null, null);
+			ItemManager.addMaterial("Copper", ToolMaterials.Copper, ArmorMaterials.Copper);
 			//30-Zi
 			ItemManager.addMaterial("Zinc", null, null);
 			//40-Zr
 			ItemManager.addMaterial("Zirconium", null, null);
 			//47-Ag
-			ItemManager.addMaterial("Silver", null, null);
+			ItemManager.addMaterial("Silver", ToolMaterials.Silver, ArmorMaterials.Silver);
 			//50-Sn
 			ItemManager.addMaterial("Tin", null, null);
 			//74-W
 			ItemManager.addMaterial("Wolfram", null, null);
-			//76-Os
+			//76-Os TODO
 			ItemManager.addMaterial("Osmium", null, null);
 			//77-Ir
 			//78-Pl
-			ItemManager.addMaterial("Platinum", null, null);
+			ItemManager.addMaterial("Platinum", ToolMaterials.Platinum, ArmorMaterials.Platinum);
 			//79-Au
-			ItemManager.addMaterial("Gold", null, null);
-			gold=new ItemBasicShears(ToolMaterial.GOLD, "Gold");
+			ItemManager.addMaterial("Gold", ToolMaterials.Gold2, ArmorMaterials.Gold2);
 			//82-Pb
 			ItemManager.addMaterial("Lead", null, null);
 			//83-Bi
@@ -56,10 +55,10 @@ public class ItemRegistry {
 			ItemManager.addMaterial("Uranium", null, null);
 		//}
 		//fantasy metals{
-			ItemManager.addMaterial("Mithril", null, null);
-			ItemManager.addMaterial("Adamantine", null, null);
-			ItemManager.addMaterial("Prometheum", null, null);
-			ItemManager.addMaterial("Vibranium", null, null);
+			ItemManager.addMaterial("Mithril", ToolMaterials.Mithril, ArmorMaterials.Mithril);
+			ItemManager.addMaterial("Adamantine", ToolMaterials.Adamantine, ArmorMaterials.Adamantine);
+			ItemManager.addMaterial("Prometheum", ToolMaterials.Prometheum, ArmorMaterials.Prometheum);
+			ItemManager.addMaterial("Orichalcum", ToolMaterials.Orichalcum, ArmorMaterials.Orichalcum);
 			ItemManager.addMaterial("Blazonium", null, null);
 			ItemManager.addMaterial("Terminium", null, null);
 			ItemManager.addMaterial("Unobtainium", null, null);
@@ -67,53 +66,52 @@ public class ItemRegistry {
 		//alloys{
 			//Al
 			ItemManager.addMaterial("Duraluminium", null, null);
-			ItemManager.addMaterial("Alumite", null, null);
+			ItemManager.addMaterial("Alumite", ToolMaterials.Alumite, ArmorMaterials.Alumite);
 			//Cr
 			ItemManager.addMaterial("Nichrome", null, null);
 			//Fe
 			ItemManager.addMaterial("PigIron", null, null);
-			ItemManager.addMaterial("Steel", null, null);
-			ItemManager.addMaterial("StainlessSteel", null, null);
-			ItemManager.addMaterial("DamascusSteel", null, null);
-			ItemManager.addMaterial("BlackSteel", null, null);
-			ItemManager.addMaterial("TearSteel", null, null);
-			ItemManager.addMaterial("BlueSteel", null, null);
-			ItemManager.addMaterial("RedSteel", null, null);
+			ItemManager.addMaterial("Steel", ToolMaterials.Steel, ArmorMaterials.Steel);
+			ItemManager.addMaterial("StainlessSteel", ToolMaterials.StainlessSteel, ArmorMaterials.StainlessSteel);
+			ItemManager.addMaterial("DamascusSteel", ToolMaterials.DamascusSteel, ArmorMaterials.DamascusSteel);
+			ItemManager.addMaterial("BlackSteel", ToolMaterials.BlackSteel, ArmorMaterials.BlackSteel);
+			ItemManager.addMaterial("TearSteel", ToolMaterials.TearSteel, ArmorMaterials.TearSteel);
+			ItemManager.addMaterial("BlueSteel", ToolMaterials.BlueSteel, ArmorMaterials.BlueSteel);
+			ItemManager.addMaterial("RedSteel", ToolMaterials.RedSteel, ArmorMaterials.RedSteel);
 			//Co
-			ItemManager.addMaterial("Stellite", null, null);
+			ItemManager.addMaterial("Stellite", ToolMaterials.Stellite, ArmorMaterials.Stellite);
 			//Ni
 			ItemManager.addMaterial("Hastelloy", null, null);
 			ItemManager.addMaterial("Cupronickel", null, null);
 			ItemManager.addMaterial("Alnico", null, null);
-			ItemManager.addMaterial("Invar", null, null);
+			ItemManager.addMaterial("Invar", ToolMaterials.Invar, ArmorMaterials.Invar);
 			//Cu
 			ItemManager.addMaterial("Brass", null, null);
 			ItemManager.addMaterial("AluminiumBrass", null, null);
-			ItemManager.addMaterial("BismuthBrass", null, null);
-			ItemManager.addMaterial("Bronze", null, null);
-			ItemManager.addMaterial("BlackBronze", null, null);
-			ItemManager.addMaterial("MithrilBronze", null, null);
-			ItemManager.addMaterial("Signalum", null, null);
+			ItemManager.addMaterial("BismuthBrass", ToolMaterials.BismuthBrass, ArmorMaterials.BismuthBrass);
+			ItemManager.addMaterial("Bronze", ToolMaterials.Bronze, ArmorMaterials.Bronze);
+			ItemManager.addMaterial("BlackBronze", ToolMaterials.BlackBronze, ArmorMaterials.BlackBronze);
+			ItemManager.addMaterial("MithrilBronze", ToolMaterials.MithrilBronze, ArmorMaterials.MithrilBronze);
+			ItemManager.addMaterial("Signalum", ToolMaterials.Signalum, ArmorMaterials.Signalum);
+			ItemManager.addMaterial("Vibranium", ToolMaterials.Vibranium, ArmorMaterials.Vibranium);
 			//Ag
-			ItemManager.addMaterial("Electrum", null, null);
+			ItemManager.addMaterial("Electrum", ToolMaterials.Electrum, ArmorMaterials.Electrum);
 			ItemManager.addMaterial("SterlingSilver", null, null);
-			ItemManager.addMaterial("Lumium", null, null);
-			ItemManager.addMaterial("Enderium", null, null);
+			ItemManager.addMaterial("Lumium", ToolMaterials.Lumium, ArmorMaterials.Lumium);
+			ItemManager.addMaterial("Enderium", ToolMaterials.Enderium, ArmorMaterials.Enderium);
 			ItemManager.addMaterial("BlueAlloy", null, null);
 			//W
-			ItemManager.addMaterial("TungstenSteel", null, null);
+			ItemManager.addMaterial("TungstenSteel", ToolMaterials.TungstenSteel, ArmorMaterials.TungstenSteel);
 			//Au
 			ItemManager.addMaterial("RoseGold", null, null);
 			
 		//}
 	}
 	public static void registerItems(){
-		GameRegistry.register(gold);
 		ItemManager.registerItems();
 	}
 	@SideOnly(Side.CLIENT)
 	public static void initItemModels(){
-		gold.initModel();
 		ItemManager.initModel();
 	}
 	public static void initOreDict(){
