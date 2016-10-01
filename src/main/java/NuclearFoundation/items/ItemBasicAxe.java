@@ -12,7 +12,7 @@ public class ItemBasicAxe extends ItemAxe{
 	public final String Type;
 	public ItemBasicAxe(ToolMaterial material,String type) {
 		super(material,8F,-3F);
-		this.damageVsEntity=material.getDamageVsEntity();
+		this.damageVsEntity=material.getDamageVsEntity()+6F;
 		this.Type=type;
 		this.setRegistryName("axe"+this.Type);
 		this.setUnlocalizedName(this.getRegistryName().toString());
