@@ -18,6 +18,7 @@ public class ItemManager {
 	public static final ItemComplexComponent Rod=new ItemComplexComponent("rod");
 	public static final ArrayList<SetTools> Tools=new ArrayList<SetTools>();
 	public static final ArrayList<SetArmor> Armor=new ArrayList<SetArmor>();
+	public static final ArrayList<String> Types=new ArrayList<String>();
 	
 	public static void addMaterial(String type,ToolMaterial toolMat,ArmorMaterial armorMat){
 		Ingot.Metal.add(type);
@@ -32,6 +33,7 @@ public class ItemManager {
 		if(armorMat!=null){
 			Armor.add(new SetArmor(type, armorMat));
 		}
+		Types.add(type);
 	}
 	@SideOnly(Side.CLIENT)
 	public static void initModel(){

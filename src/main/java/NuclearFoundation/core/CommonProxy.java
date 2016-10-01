@@ -1,5 +1,6 @@
 package NuclearFoundation.core;
 
+import NuclearFoundation.crafting.ItemCrafting;
 import NuclearFoundation.crafting.ToolCrafting;
 import NuclearFoundation.items.ItemManager;
 import NuclearFoundation.items.ItemRegistry;
@@ -16,6 +17,7 @@ public class CommonProxy {
 	}
 	public void init(FMLInitializationEvent e){
 		ToolCrafting.init();
+		ItemCrafting.init();
 	}
 	public void postInit(FMLPostInitializationEvent e){
 		
