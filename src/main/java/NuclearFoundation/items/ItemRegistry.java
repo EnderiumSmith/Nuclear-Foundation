@@ -2,6 +2,7 @@ package NuclearFoundation.items;
 
 import NuclearFoundation.core.ArmorMaterials;
 import NuclearFoundation.core.ToolMaterials;
+import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -107,8 +108,16 @@ public class ItemRegistry {
 			
 		//}
 	}
+	
+	public static Item Trident=new ItemSpecialWeapon(ToolMaterials.Orichalcum, "Trident", 13F, -3.2F);
+	public static Item Elucidator=new ItemSpecialWeapon(ToolMaterials.BlackSteel, "Elucidator", 15F, -3.2F);
+	public static Item Claws=new ItemSpecialWeapon(ToolMaterials.Adamantine, "Claws", 10F, -0.8F);
+	
 	public static void registerItems(){
 		ItemManager.registerItems();
+		GameRegistry.register(Trident);
+		GameRegistry.register(Elucidator);
+		GameRegistry.register(Claws);
 	}
 	@SideOnly(Side.CLIENT)
 	public static void initItemModels(){

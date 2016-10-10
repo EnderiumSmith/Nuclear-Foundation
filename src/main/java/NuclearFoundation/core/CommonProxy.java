@@ -1,5 +1,6 @@
 package NuclearFoundation.core;
 
+import NuclearFoundation.blocks.ModBlocks;
 import NuclearFoundation.crafting.ItemCrafting;
 import NuclearFoundation.crafting.ToolCrafting;
 import NuclearFoundation.items.ItemManager;
@@ -14,6 +15,7 @@ public class CommonProxy {
 		ItemRegistry.initItems();
 		ItemRegistry.registerItems();
 		ItemRegistry.initOreDict();
+		//ModBlocks.init();
 	}
 	public void init(FMLInitializationEvent e){
 		ToolCrafting.init();
