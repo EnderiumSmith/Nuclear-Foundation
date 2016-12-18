@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "nukebase:items/material/Adamantine/tool/pickAdamantine"
+    }
+}

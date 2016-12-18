@@ -1,0 +1,9 @@
+{
+   "defaults":{
+	"model":"nukebase:MetalBlock"
+	},
+   "variants": {
+       "type": {
+	 "boron":{"textures":{"front": "nukebase:blocks/block_boron"}}
+	}
+}

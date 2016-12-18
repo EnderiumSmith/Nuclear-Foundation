@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "type=boron": { "model": "nukebase:boron" },
+		"type=aluminium": { "model": "nukebase:aluminium" },
+		"type=titanium": { "model": "nukebase:titanium" },
+		"type=cromium": { "model": "nukebase:cromium" },
+		"type=cobalt": { "model": "nukebase:cobalt" },
+		"type=nickel": { "model": "nukebase:nickel" },
+		"type=copper": { "model": "nukebase:copper" },
+		"type=zinc": { "model": "nukebase:zinc" },
+		"type=arsenic": { "model": "nukebase:arsenic" },
+		"type=zirconium": { "model": "nukebase:zirconium" },
+		"type=silver": { "model": "nukebase:silver" },
+		"type=tin": { "model": "nukebase:tin" },
+		"type=wolfram": { "model": "nukebase:wolfram" },
+		"type=osium": { "model": "nukebase:osium" },
+		"type=platinum": { "model": "nukebase:platinum" },
+		"type=lead": { "model": "nukebase:lead" }
+    }
+}

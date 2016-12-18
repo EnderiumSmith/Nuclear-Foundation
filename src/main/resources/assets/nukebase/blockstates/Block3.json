@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "type=enderium": { "model": "nukebase:enderium" },
+		"type=teslium": { "model": "nukebase:teslium" },
+		"type=tungstensteel": { "model": "nukebase:tungstensteel" },
+		"type=rosegold": { "model": "nukebase:rosegold" },
+		"type=missingno": { "model": "nukebase:missingno" }
+    }
+}

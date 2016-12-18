@@ -28,8 +28,8 @@ public class MetalColorizer {
 		case("Adamantine"):return 0xeeeeee;
 		case("Prometheum"):return 0x165f1e;
 		case("Orichalcum"):return 0xff8e2b;
-		case("Blazonium"):return 0x0;
-		case("Terminium"):return 0x0B4748;
+		case("Blazonium"):return 0xfa7420;
+		case("Terminium"):return 0xff00ff;
 		case("Duraluminium"):return 0xeeeeee;
 		case("Alumite"):return 0xffa3f7;
 		case("PigIron"):return 0xa99faa;
@@ -44,7 +44,7 @@ public class MetalColorizer {
 		case("Hastelloy"):return 0x808080;
 		case("Alnico"):return 0x808080;
 		case("Invar"):return 0xb4b4b4;
-		case("Brass"):return 0xffff0b;
+		case("Brass"):return 0xffe945;
 		case("AluminiumBrass"):return 0xfbff65;
 		case("BismuthBrass"):return 0x67b475;
 		case("Bronze"):return 0xFFCB00;
@@ -52,13 +52,15 @@ public class MetalColorizer {
 		case("MithrilBronze"):return 0xD1FFFC;
 		case("Signalum"):return 0xFF4E00;
 		case("Vibranium"):return 0x6cc978;
-		case("Electrum"):return 0x0;
+		case("Electrum"):return 0xffe945;
 		case("SterlingSilver"):return 0xebcc93;
 		case("Lumium"):return 0xfbff65;
 		case("Enderium"):return 0x0E5B5B;
-		case("BlueAlloy"):return 0x0;
+		case("BlueAlloy"):return 0x55cfff;
 		case("TungstenSteel"):return 0x292929;
-		case("RoseGold"):return 0xFF9461;
+		case("RoseGold"):return 0xf1c4c4;
+		case("Nichrome"):return 0xfffce1;
+		case("Arsenic"):return 0x909090;
 		default:return -1;
 		}
 	}

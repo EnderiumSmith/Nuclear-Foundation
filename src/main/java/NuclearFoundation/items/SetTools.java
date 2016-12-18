@@ -24,7 +24,20 @@ public class SetTools {
 		this.Axe=new ItemBasicAxe(material, type);
 		this.Sword=new ItemBasicSword(material, type);
 		this.Hoe=new ItemBasicHoe(material, type);
-		this.Shears=new ItemBasicShears(material, type);
+		this.Shears=null;
+	}
+	public SetTools(String type, ToolMaterial material,boolean shears){
+		this.Type=type;
+		this.Material=material;
+		this.Pick=new ItemBasicPick(material, type);
+		this.Shovel=new ItemBasicShovel(material, type);
+		this.Axe=new ItemBasicAxe(material, type);
+		this.Sword=new ItemBasicSword(material, type);
+		this.Hoe=new ItemBasicHoe(material, type);
+		if(shears==true)
+			this.Shears=new ItemBasicShears(material, type);
+		else
+			this.Shears=null;
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel(){
@@ -33,7 +46,8 @@ public class SetTools {
 		this.Axe.initModel();
 		this.Sword.initModel();
 		this.Hoe.initModel();
-		this.Shears.initModel();
+		if(this.Shears!=null)
+			this.Shears.initModel();
 	}
 	public void registerItems(){
 		GameRegistry.register(this.Pick);
@@ -41,6 +55,7 @@ public class SetTools {
 		GameRegistry.register(this.Axe);
 		GameRegistry.register(this.Sword);
 		GameRegistry.register(this.Hoe);
-		GameRegistry.register(this.Shears);
+		if(this.Shears!=null)
+			GameRegistry.register(this.Shears);
 	}
 }

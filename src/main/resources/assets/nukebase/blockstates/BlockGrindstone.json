@@ -1,0 +1,18 @@
+{
+	"forge_marker": 1,
+	"defaults":{
+		"model": "nukebase:grindstone"
+	},
+	"variants":{
+		"facing":{
+			"north":{},
+			"south":{"y": 180},
+			"west":{"y": 270},
+			"east":{"y": 90}
+		},
+		"has_stone":{
+			"true":{"model": "nukebase:grindstone_stone"},
+			"false":{}
+		}
+	}
+}

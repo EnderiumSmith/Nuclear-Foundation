@@ -101,7 +101,8 @@ public class ToolCrafting {
 			AxeRecipe(tools.Axe, ingot, ing2);
 			SwordRecipe(tools.Sword, ingot, ing2);
 			HoeRecipe(tools.Hoe, ingot, ing2);
-			ShearsRecipe(tools.Shears, ingot);
+			if(tools.Shears!=null)
+				ShearsRecipe(tools.Shears, ingot);
 		}
 	}
 	public static void ArmorRecipe(SetArmor armor,String ingot){

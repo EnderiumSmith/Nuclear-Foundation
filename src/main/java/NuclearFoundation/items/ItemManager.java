@@ -2,6 +2,7 @@ package NuclearFoundation.items;
 
 import java.util.ArrayList;
 
+import NuclearFoundation.core.Config;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -27,13 +28,36 @@ public class ItemManager {
 		Gear.Metal.add(type);
 		Plate.Metal.add(type);
 		Rod.Metal.add(type);
-		if(toolMat!=null){
+		if(toolMat!=null&&Config.IsToolsEnabled){
 			Tools.add(new SetTools(type, toolMat));
 		}
-		if(armorMat!=null){
+		if(armorMat!=null&&Config.IsArmorEnebled){
 			Armor.add(new SetArmor(type, armorMat));
 		}
 		Types.add(type);
+	}
+	public static void addMaterial(String type,ToolMaterial toolMat,ArmorMaterial armorMat,boolean shears){
+		Ingot.Metal.add(type);
+		Dust.Metal.add(type);
+		Nugget.Metal.add(type);
+		Gear.Metal.add(type);
+		Plate.Metal.add(type);
+		Rod.Metal.add(type);
+		if(toolMat!=null&&Config.IsToolsEnabled){
+			Tools.add(new SetTools(type, toolMat,true));
+		}
+		if(armorMat!=null&&Config.IsArmorEnebled){
+			Armor.add(new SetArmor(type, armorMat));
+		}
+		Types.add(type);
+	}
+	public static void addSecondary(String type,ToolMaterial toolMat,ArmorMaterial armorMat,boolean shears){
+		if(toolMat!=null&&Config.IsToolsEnabled){
+			Tools.add(new SetTools(type, toolMat,shears));
+		}
+		if(armorMat!=null&&Config.IsArmorEnebled){
+			Armor.add(new SetArmor(type, armorMat));
+		}
 	}
 	@SideOnly(Side.CLIENT)
 	public static void initModel(){

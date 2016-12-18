@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "type=tearsteel": { "model": "nukebase:tearsteel" },
+		"type=bluesteel": { "model": "nukebase:bluesteel" },
+		"type=redsteel": { "model": "nukebase:redsteel" },
+		"type=stellite": { "model": "nukebase:stellite" },
+		"type=invar": { "model": "nukebase:invar" },
+		"type=brass": { "model": "nukebase:brass" },
+		"type=aluminiumbrass": { "model": "nukebase:aluminiumbrass" },
+		"type=bismuthbrass": { "model": "nukebase:bismuthbrass" },
+		"type=bronze": { "model": "nukebase:bronze" },
+		"type=blackbronze": { "model": "nukebase:blackbronze" },
+		"type=mithrilbronze": { "model": "nukebase:mithrilbronze" },
+		"type=signalum": { "model": "nukebase:signalum" },
+		"type=vibranium": { "model": "nukebase:vibranium" },
+		"type=electrum": { "model": "nukebase:electrum" },
+		"type=sterlingsteel": { "model": "nukebase:sterlingsteel" },
+		"type=lumium": { "model": "nukebase:lumium" }
+    }
+}

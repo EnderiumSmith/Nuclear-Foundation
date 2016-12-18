@@ -1,8 +1,10 @@
 package NuclearFoundation.items;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 
 public class CustomCreativeTabs {
 	
@@ -25,6 +27,13 @@ public class CustomCreativeTabs {
 		@Override
 		public Item getTabIconItem() {
 			return Items.IRON_CHESTPLATE;
+		}
+	};
+	public static final CreativeTabs TabBlocks=new CreativeTabs("Blocks") {
+		
+		@Override
+		public Item getTabIconItem() {
+			return ItemBlock.getItemFromBlock(Blocks.IRON_BLOCK);
 		}
 	};
 }

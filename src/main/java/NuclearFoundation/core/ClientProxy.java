@@ -1,5 +1,6 @@
 package NuclearFoundation.core;
 
+import NuclearFoundation.blocks.BlockRegistry;
 import NuclearFoundation.items.ItemComplexComponent;
 import NuclearFoundation.items.ItemManager;
 import NuclearFoundation.items.ItemRegistry;
@@ -17,6 +18,7 @@ public class ClientProxy extends CommonProxy {
 	public void preInit(FMLPreInitializationEvent e){
 		super.preInit(e);
 		ItemRegistry.initItemModels();
+		BlockRegistry.initModel();
 	}
 	public void init(FMLInitializationEvent e){
 		super.init(e);

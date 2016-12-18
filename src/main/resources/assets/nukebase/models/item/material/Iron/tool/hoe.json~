@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "nukebase:items/material/Iron2/tool/hoeIron2"
+    }
+}

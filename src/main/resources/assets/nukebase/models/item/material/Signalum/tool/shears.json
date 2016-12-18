@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "nukebase:items/material/Test/tool/shearsTest"
+        "layer0": "nukebase:items/material/Signalum/tool/shearsSignalum"
     }
 }

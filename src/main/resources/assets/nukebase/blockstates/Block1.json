@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "type=bismuth": { "model": "nukebase:bismuth" },
+		"type=thorium": { "model": "nukebase:thorium" },
+		"type=mithril": { "model": "nukebase:mithril" },
+		"type=adamatine": { "model": "nukebase:adamatine" },
+		"type=prometheum": { "model": "nukebase:prometheum" },
+		"type=orichalcum": { "model": "nukebase:orichalcum" },
+		"type=blazonium": { "model": "nukebase:blazonium" },
+		"type=terminium": { "model": "nukebase:terminium" },
+		"type=duraluminium": { "model": "nukebase:duraluminium" },
+		"type=alumite": { "model": "nukebase:alumite" },
+		"type=nichrome": { "model": "nukebase:nichrome" },
+		"type=pigiron": { "model": "nukebase:pigiron" },
+		"type=steel": { "model": "nukebase:steel" },
+		"type=stainlesssteel": { "model": "nukebase:stainlesssteel" },
+		"type=damascussteel": { "model": "nukebase:damascussteel" },
+		"type=blacksteel": { "model": "nukebase:blacksteel" }
+    }
+}
