@@ -2,7 +2,9 @@ package NuclearFoundation.blocks;
 
 import java.util.List;
 
-import NuclearFoundation.items.MetalItemBlock;
+import NuclearFoundation.core.Constants;
+import NuclearFoundation.items.CustomCreativeTabs;
+import NuclearFoundation.items.MetadataItem;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -13,27 +15,42 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
-public class MetalBlock extends BlockBasic{
+public class MetalBlock extends BlockMeta{
 
 	public final int Meta;
-	MetalItemBlock itemblock;
+	MetadataItem itemblock;
 	public static final PropertyEnum<EnumType> TYPE=PropertyEnum.create("type", MetalBlock.EnumType.class);
 	public MetalBlock(String name,int metadata) {
-		super(Material.IRON, name+metadata, 5F, 3F, 2, "pickaxe");
+		super(Material.IRON);
 		this.Meta=metadata;
+		setRegistryName(name+metadata);
+		setUnlocalizedName(getRegistryName().toString());
+		setHardness(5);
+		setResistance(10);
+		setCreativeTab(CustomCreativeTabs.TabBlocks);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumType.MISSINGNO));
 	}
-	@Override
 	public void initModel() {
-		super.initModel();
 		itemblock.initModel();
 	}
-	@Override
 	public void register() {
 		GameRegistry.register(this);
-		itemblock=new MetalItemBlock(this);
+		itemblock=new MetadataItem(this);
 		GameRegistry.register(itemblock, getRegistryName());
+	}
+	@Override
+	public String getUnlocalizedNameWithMeta(ItemStack stack) {
+		if(stack!=null)
+			return "item."+Constants.MODID+":"+getOreName(stack.getMetadata())+"Block.name";
+		return getUnlocalizedName();
+	}
+	public void initOredict(){
+		for(int i=0;i<16;i++){
+			if(getStateFromMeta(i).getValue(TYPE)!=EnumType.MISSINGNO);
+				OreDictionary.registerOre("block"+getStateFromMeta(i).getValue(TYPE).getOreName(), new ItemStack(this, 1, i));
+		}
 	}
 	@Override
 	protected BlockStateContainer createBlockState() {
@@ -41,8 +58,6 @@ public class MetalBlock extends BlockBasic{
 	}
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
-		if(meta+16*this.Meta>53)
-			return getDefaultState().withProperty(TYPE, EnumType.MISSINGNO);
 		for(EnumType e:EnumType.values()){
 			if(e.getMeta()==meta+16*this.Meta)
 				return getDefaultState().withProperty(TYPE, e);
@@ -61,21 +76,21 @@ public class MetalBlock extends BlockBasic{
 	@Override
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
 		for(int i=0;i<16;i++)
-			list.add(new ItemStack(itemIn, 1, i));
+			if(getStateFromMeta(i).getValue(TYPE)!=EnumType.MISSINGNO)
+				list.add(new ItemStack(itemIn, 1, i));
 	}
 	public String getOreName(int meta){
-		if(meta+16*this.Meta<53)
-			for(EnumType e:EnumType.values()){
-				if(e.getMeta()==meta+16*this.Meta)
-					return e.getOreName();
-			}
+		for(EnumType e:EnumType.values()){
+			if(e.getMeta()==meta+16*this.Meta)
+				return e.getOreName();
+		}
 		return EnumType.MISSINGNO.getOreName();
 	}
 	public enum EnumType implements IStringSerializable{
 		BORON(0,"Boron"),
 		ALUMINIUM(1,"Aluminium"),
 		TITANIUM(2,"Titanium"),
-		CROMIUM(3,"Cromium"),
+		CROMIUM(3,"Chromium"),
 		COBALT(4,"Cobalt"),
 		NICKEl(5,"Nickel"),
 		COPPER(6,"Copper"),
@@ -100,7 +115,7 @@ public class MetalBlock extends BlockBasic{
 		DURALUMINIUM(25,"Duraluminium"),
 		ALUMITE(26,"Alumite"),
 		NICHROME(27,"Nichrome"),
-		PIGIRON(28,"Pigiron"),
+		PIGIRON(28,"PigIron"),
 		STEEL(29,"Steel"),
 		STAINLESSSTEEL(30,"StainlessSteel"),
 		DAMASCUSSTEEL(31,"Damascussteel"),
@@ -125,7 +140,8 @@ public class MetalBlock extends BlockBasic{
 		TESLIUM(50,"Teslium"),
 		TUNGSTEMSTEEL(51,"TungstenSteel"),
 		ROSEGOLD(52,"RoseGold"),
-		MISSINGNO(53,"MissingNo");
+		ALUMINA(53,"Alumina"),
+		MISSINGNO(54,"MissingNo");
 		
 		
 		private int Meta;

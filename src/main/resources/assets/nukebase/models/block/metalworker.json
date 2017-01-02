@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "nukebase:blocks/metalworker_top",
+    "down": "nukebase:blocks/metalworker_bottom",
+    "up": "nukebase:blocks/metalworker_top",
+    "east": "nukebase:blocks/metalworker_side",
+    "west": "nukebase:blocks/metalworker_side",
+    "north": "nukebase:blocks/metalworker_side",
+    "south": "nukebase:blocks/metalworker_side"
+  }
+}

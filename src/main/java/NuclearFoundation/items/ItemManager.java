@@ -59,6 +59,10 @@ public class ItemManager {
 			Armor.add(new SetArmor(type, armorMat));
 		}
 	}
+	public static void addIngot(String type){
+		Ingot.Metal.add(type);
+		Dust.Metal.add(type);
+	}
 	@SideOnly(Side.CLIENT)
 	public static void initModel(){
 		Ingot.initModel();

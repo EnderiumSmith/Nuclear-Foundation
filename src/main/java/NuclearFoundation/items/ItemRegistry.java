@@ -4,9 +4,11 @@ import NuclearFoundation.core.ArmorMaterials;
 import NuclearFoundation.core.Config;
 import NuclearFoundation.core.ToolMaterials;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class ItemRegistry {
 	
@@ -20,7 +22,7 @@ public class ItemRegistry {
 			//22-Ti
 			ItemManager.addMaterial("Titanium", ToolMaterials.Titanium, ArmorMaterials.Titanium,true);
 			//24-Cr
-			ItemManager.addMaterial("Cromium", null, null);
+			ItemManager.addMaterial("Chromium", null, null);
 			//26-Fe
 			ItemManager.addMaterial("Iron", null, null);
 			//27-Co
@@ -103,40 +105,83 @@ public class ItemRegistry {
 			ItemManager.addMaterial("Lumium", null, ArmorMaterials.Lumium);
 			ItemManager.addMaterial("Enderium", ToolMaterials.Enderium, ArmorMaterials.Enderium,true);
 			ItemManager.addMaterial("Teslium", ToolMaterials.Teslium, ArmorMaterials.Teslium);
+			ItemManager.addMaterial("RedNik", null, null);
 			//W
 			ItemManager.addMaterial("TungstenSteel", ToolMaterials.TungstenSteel, ArmorMaterials.TungstenSteel,true);
 			//Au
 			ItemManager.addMaterial("RoseGold", null, null);
 			
 		//}
+			ItemManager.Gear.Metal.add("Wood");
+			ItemManager.Dust.Metal.add("Obsidian");
+			ItemManager.addIngot("WeakAlumite");
+			ItemManager.addIngot("WeakStainlessSteel");
+			ItemManager.addIngot("WeakBlackSteel");
+			ItemManager.addIngot("WeakTearSteel");
+			ItemManager.addIngot("WeakBlueSteel");
+			ItemManager.addIngot("WeakRedSteel");
+			ItemManager.addIngot("WeakStellite");
+			ItemManager.addIngot("WeakEnderium");
+			ItemManager.addIngot("Alumina");
+			ItemManager.addIngot("WeakVibranium");
+			
+			ItemManager.addSecondary("Emerald", ToolMaterials.Emerald, ArmorMaterials.Emerald, false);
+			ItemManager.addSecondary("Sapphire", ToolMaterials.Sapphire, ArmorMaterials.Sapphire, false);
+			ItemManager.addSecondary("Amethyst", ToolMaterials.Amethyst, ArmorMaterials.Amethyst, false);
+			ItemManager.addSecondary("Ruby", ToolMaterials.Ruby, ArmorMaterials.Ruby, false);
+			ItemManager.addSecondary("TigerEye", ToolMaterials.TigerEye, ArmorMaterials.TigerEye, false);
+			ItemManager.addSecondary("Obsidian", ToolMaterials.Obsidian, null, false);
 	}
 	
 	public static Item Trident=new ItemSpecialWeapon(ToolMaterials.Orichalcum, "Trident", 13F, -3.2F);
 	public static Item Elucidator=new ItemSpecialWeapon(ToolMaterials.BlackSteel, "Elucidator", 15F, -3.2F);
+	public static Item BigBlueBlade=new ItemSpecialWeapon(ToolMaterial.DIAMOND, "BigBlueBlade", 14, -3.2F);
 	public static Item Claws=new ItemSpecialWeapon(ToolMaterials.Adamantine, "Claws", 10F, -0.8F);
 	//Grindstone
 	public static Item GrindStone=new ItemGrindstone(63, "grindstone");
 	public static Item ObsidianGrindStone=new ItemGrindstone(1023, "obsidiangrindstone");
 	public static Item WoodCrank=new ItemCrank((int)(480*Config.GrindStoneTime), "woodencrank");
 	public static Item IronCrank=new ItemCrank((int)(3840*Config.GrindStoneTime), "ironcrank");
+	//item
+	public static ItemBasic Sapphire=new ItemBasic("Sapphire");
+	public static ItemBasic Amethyst=new ItemBasic("Amethyst");
+	public static ItemBasic Ruby=new ItemBasic("Ruby");
+	public static ItemBasic TigerEye=new ItemBasic("TigerEye");
 		
 	public static void registerItems(){
 		ItemManager.registerItems();
 		if(Config.IsToolsEnabled){
 			GameRegistry.register(Trident);
 			GameRegistry.register(Elucidator);
+			GameRegistry.register(BigBlueBlade);
 			GameRegistry.register(Claws);
 		}
 		GameRegistry.register(GrindStone);
 		GameRegistry.register(ObsidianGrindStone);
 		GameRegistry.register(WoodCrank);
 		GameRegistry.register(IronCrank);
+		Sapphire.setCreativeTab(CustomCreativeTabs.TabMaterials);
+		Amethyst.setCreativeTab(CustomCreativeTabs.TabMaterials);
+		Ruby.setCreativeTab(CustomCreativeTabs.TabMaterials);
+		TigerEye.setCreativeTab(CustomCreativeTabs.TabMaterials);
+		Sapphire.register();
+		Amethyst.register();
+		Ruby.register();
+		TigerEye.register();
 	}
 	@SideOnly(Side.CLIENT)
 	public static void initItemModels(){
 		ItemManager.initModel();
+		Ruby.initModel();
+		TigerEye.initModel();
+		Sapphire.initModel();
+		Amethyst.initModel();
 	}
 	public static void initOreDict(){
 		ItemManager.registerOreDict();
+		OreDictionary.registerOre("gemRuby", Ruby);
+		OreDictionary.registerOre("gemTigerEye", TigerEye);
+		OreDictionary.registerOre("gemAmethyst", Amethyst);
+		OreDictionary.registerOre("gemSapphire", Sapphire);
 	}
 }

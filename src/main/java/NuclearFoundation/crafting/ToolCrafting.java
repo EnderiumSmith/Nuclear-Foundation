@@ -3,6 +3,7 @@ package NuclearFoundation.crafting;
 import NuclearFoundation.items.ItemManager;
 import NuclearFoundation.items.SetArmor;
 import NuclearFoundation.items.SetTools;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -114,29 +115,37 @@ public class ToolCrafting {
 		}
 	}
 	public static void init(){
-		final String[] materials=new String[]{"Boron","Titanium","Iron","Copper","Silver","Platinum","Gold",
-				"Mithril","Adamantine","Prometheum","Orichalcum","Alumite",
-				"Steel","StainlessSteel","DamascusSteel","BlackSteel","TearSteel","BlueSteel","RedSteel",
-				"Stellite","Invar","Signalum","Vibranium","Lumium","Enderium","Electrum","TungstenSteel",
-				"BismuthBrass","Bronze","BlackBronze","MithrilBronze"};
-		for(int i=0;i<materials.length;i++){
 			for(int j=0;j<ItemManager.Tools.size();j++){
 				SetTools tools=ItemManager.Tools.get(j);
-				if(tools.Type.equals(materials[i])){
-					ToolRecipe(tools, "ingot"+materials[i], "stickWood");
-					if(materials[i].equals("Prometheum")){
+					ToolRecipe(tools, "ingot"+tools.Type, "stickWood");
+					if(tools.Type.equals("Prometheum")){
 						ToolRecipe(tools, "ingotPrometheum", Items.BONE);
 					}
-					break;
 				}
-			}
 			for(int j=0;j<ItemManager.Armor.size();j++){
 				SetArmor armor=ItemManager.Armor.get(j);
-				if(armor.Type.equals(materials[i])){
-					ArmorRecipe(armor, "ingot"+materials[i]);
-					break;
+					ArmorRecipe(armor, "ingot"+armor.Type);
+			}
+			String[] string=new String[]{"Ruby","TigerEye","Emerald","Sapphire","Amethyst","Obsidian"};
+			for(int i=0;i<ItemManager.Tools.size();i++){
+				SetTools tools=ItemManager.Tools.get(i);
+				for(int j=0;j<string.length;j++){
+					if(tools.Type.equals(string[j])){
+						if(string[j].equals("Obsidian")){
+							ToolRecipe(tools, "obsidian", "stickWood");
+						}else{
+							ToolRecipe(tools, "gem"+string[j], "stickWood");
+						}	
+					}
 				}
 			}
-		}
+			for(int i=0;i<ItemManager.Armor.size();i++){
+				SetArmor armor=ItemManager.Armor.get(i);
+				for(int j=0;j<string.length;j++){
+					if(armor.Type.equals(string[j])){
+						ArmorRecipe(armor, "gem"+string[j]);
+					}
+				}
+			}
 	}
 }

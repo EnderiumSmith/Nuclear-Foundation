@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import NuclearFoundation.core.Constants;
+import NuclearFoundation.crafting.OredictHelper;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -52,7 +53,10 @@ public class ItemComplexComponent extends Item{
 	}
 	public void registerOreDict(){
 		for(int i=0;i<this.Metal.size();i++){
-			OreDictionary.registerOre(this.Type+this.Metal.get(i), new ItemStack(this, 1, i));
+			String[] string=OredictHelper.getOredictForIngot(this.Metal.get(i));
+			for(int j=0;j<string.length;j++){
+				OreDictionary.registerOre(this.Type+string[j], new ItemStack(this, 1, i));
+			}
 		}
 	}
 	@SideOnly(Side.CLIENT)

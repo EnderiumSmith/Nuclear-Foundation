@@ -1,0 +1,20 @@
+{
+	"forge_marker": 1,
+	"defaults":{
+		"model": "nukebase:ore"
+	},
+	"variants":{
+		"type":{
+			"netherpyrite":{"textures":{"face":"nukebase:blocks/nether_gold_ore"}},
+			"netherarsenopyrite":{"textures":{"face":"nukebase:blocks/nether_arsenopyrite_ore"}},		
+			"nethersilver":{"textures":{"face":"nukebase:blocks/nether_silver_ore"}},
+			"nethergold":{"textures":{"face":"nukebase:blocks/nether_gold_ore"}},
+			"nethercinnabar":{"textures":{"face":"nukebase:blocks/nether_cinnabar_ore"}},
+			"netherprometheum":{"textures":{"face":"nukebase:blocks/nether_prometheum_ore"}},
+			"nethermithril":{"textures":{"face":"nukebase:blocks/nether_mithril_ore"}},
+			"netherquartz":{"textures":{"face":"minecraft:blocks/quartz_ore"}},
+			"nethersulfur":{"textures":{"face":"nukebase:blocks/nether_sulfur_ore"}},		
+			"netherdiamond":{"textures":{"face":"nukebase:blocks/nether_diamond_ore"}}
+		}
+	}
+}

@@ -19,7 +19,7 @@ public class ArmorMaterials {
 	public static final ArmorMaterial Silver=EnumHelper.addArmorMaterial(			"Silver", "", 			8, 	new int[]{1,3,5,2}, 19, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0F);
 	public static final ArmorMaterial Platinum=EnumHelper.addArmorMaterial(			"Platinum", "", 		8, 	new int[]{1,3,5,2}, 23, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0F);
 	public static final ArmorMaterial Mithril=EnumHelper.addArmorMaterial(			"Mithril", "", 			30, new int[]{3,5,7,3}, 35, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2F);
-	public static final ArmorMaterial Adamantine=EnumHelper.addArmorMaterial(		"Adamantine", "", 		256,new int[]{3,7,9,3}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 8F);
+	public static final ArmorMaterial Adamantine=EnumHelper.addArmorMaterial(		"Adamantine", "", 		256,new int[]{3,7,9,4}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 8F);
 	public static final ArmorMaterial Prometheum=EnumHelper.addArmorMaterial(		"Prometheum", "", 		11, new int[]{2,5,5,2}, 19, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0F);
 	public static final ArmorMaterial Terminium=EnumHelper.addArmorMaterial(		"Terminium", "", 		23, new int[]{2,6,7,2}, 11, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1F);
 	public static final ArmorMaterial Alumite=EnumHelper.addArmorMaterial(			"Alumite", "", 			22, new int[]{2,6,7,2}, 7, 	SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1F);
@@ -43,6 +43,10 @@ public class ArmorMaterials {
 	public static final ArmorMaterial Lumium=EnumHelper.addArmorMaterial(			"Lumium", "", 			11, new int[]{1,3,5,2}, 27, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0F);
 	public static final ArmorMaterial Enderium=EnumHelper.addArmorMaterial(			"Enderium", "",			48, new int[]{3,7,8,4}, 23, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.5F);
 	public static final ArmorMaterial TungstenSteel=EnumHelper.addArmorMaterial(	"TungstenSteel", "", 	40, new int[]{3,7,8,4}, 8, 	SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.5F);
-	
+	public static final ArmorMaterial Emerald=EnumHelper.addArmorMaterial(			"Emerald", "", 			24, new int[]{2,5,7,2}, 35, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1F);
+	public static final ArmorMaterial Sapphire=EnumHelper.addArmorMaterial(			"Sapphire", "", 		24, new int[]{2,5,7,2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1F);
+	public static final ArmorMaterial Amethyst=EnumHelper.addArmorMaterial(			"Amethyst", "", 		24, new int[]{2,5,7,2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1F);
+	public static final ArmorMaterial Ruby=EnumHelper.addArmorMaterial(				"Ruby", "", 			24, new int[]{2,5,7,2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1F);
+	public static final ArmorMaterial TigerEye=EnumHelper.addArmorMaterial(			"TigerEye", "", 		24, new int[]{2,5,7,2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1F);
 	
 }

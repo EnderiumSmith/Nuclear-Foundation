@@ -36,4 +36,11 @@ public class CustomCreativeTabs {
 			return ItemBlock.getItemFromBlock(Blocks.IRON_BLOCK);
 		}
 	};
+	public static final CreativeTabs TabItems=new CreativeTabs("Items") {
+		
+		@Override
+		public Item getTabIconItem() {
+			return Items.STICK;
+		}
+	};
 }

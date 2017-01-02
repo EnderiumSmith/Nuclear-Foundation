@@ -65,6 +65,36 @@ public class ItemBasicArmor extends ItemArmor{
 				tooltip.add(ChatFormatting.RED+"Blocks up to 40% of environmental fire damage");
 			}
 		}
+		if(((ItemArmor)stack.getItem()).getArmorMaterial()==ArmorMaterials.Ruby){
+			tooltip.add(ChatFormatting.DARK_RED+"Fire Ward");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.DARK_RED+"Blocks up to 60% of fire damage");
+			}
+		}
+		if(((ItemArmor)stack.getItem()).getArmorMaterial()==ArmorMaterials.TigerEye){
+			tooltip.add(ChatFormatting.GOLD+"Feline Aura");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.GOLD+"Blocks up to 40% of creeper damage");
+			}
+		}
+		if(((ItemArmor)stack.getItem()).getArmorMaterial()==ArmorMaterials.Emerald){
+			tooltip.add(ChatFormatting.GREEN+"Mending");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.GREEN+"Vanilla Mending built it");
+			}
+		}
+		if(((ItemArmor)stack.getItem()).getArmorMaterial()==ArmorMaterials.Sapphire){
+			tooltip.add(ChatFormatting.DARK_BLUE+"Icy Spikes");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.DARK_BLUE+"Slows and hurts attacker");
+			}
+		}
+		if(((ItemArmor)stack.getItem()).getArmorMaterial()==ArmorMaterials.Amethyst){
+			tooltip.add(ChatFormatting.DARK_PURPLE+"Calm Mind");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.DARK_PURPLE+"Redirects up to 40% of psychic/ender damage");
+			}
+		}
 	}
 	/*@Override
 	public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot) {
@@ -83,8 +113,8 @@ public class ItemBasicArmor extends ItemArmor{
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type){
 		if(this.armorType==EntityEquipmentSlot.LEGS)
-			return Constants.MODID+":textures/items/material/"+this.Type+"/tool/armor"+this.Type+"_layer_2.png";
-		return Constants.MODID+":textures/items/material/"+this.Type+"/tool/armor"+this.Type+"_layer_1.png";
+			return Constants.MODID+":textures/models/armor/"+this.Type+"_layer_2.png";
+		return Constants.MODID+":textures/models/armor/"+this.Type+"_layer_1.png";
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel(){

@@ -1,0 +1,26 @@
+{
+	"forge_marker": 1,
+	"defaults":{
+		"model": "nukebase:ore"
+	},
+	"variants":{
+		"type":{
+			"bauxite":{"textures":{"face":"nukebase:blocks/bauxite_ore"}},
+			"ilmenite":{"textures":{"face":"nukebase:blocks/ilmenite_ore"}},		
+			"chromite":{"textures":{"face":"nukebase:blocks/chromite_ore"}},
+			"hematite":{"textures":{"face":"nukebase:blocks/hematite_ore"}},
+			"magnetite":{"textures":{"face":"nukebase:blocks/magnetite_ore"}},
+			"limonite":{"textures":{"face":"nukebase:blocks/limonite_ore"}},
+			"pyrite":{"textures":{"face":"nukebase:blocks/pyrite_ore"}},
+			"cobaltite":{"textures":{"face":"nukebase:blocks/cobaltite_ore"}},
+			"garnierite":{"textures":{"face":"nukebase:blocks/garnierite_ore"}},
+			"copper":{"textures":{"face":"nukebase:blocks/copper_ore"}},
+			"malachite":{"textures":{"face":"nukebase:blocks/malachite_ore"}},
+			"shpalerite":{"textures":{"face":"nukebase:blocks/shpalerite_ore"}},
+			"arsenopyrite":{"textures":{"face":"nukebase:blocks/arsenopyrite_ore"}},
+			"zircon":{"textures":{"face":"nukebase:blocks/zircon_ore"}},
+			"silver":{"textures":{"face":"nukebase:blocks/silver_ore"}},
+			"cassiterite":{"textures":{"face":"nukebase:blocks/cassiterite_ore"}},
+		}
+	}
+}

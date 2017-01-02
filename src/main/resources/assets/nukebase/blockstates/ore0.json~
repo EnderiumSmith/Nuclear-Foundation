@@ -1,0 +1,44 @@
+{
+	"forge_marker": 1,
+	"defaults":{
+		"model": "nukebase:ore"
+	},
+	"variants":{
+		"type":{
+			"bauxite":{"textures":{"face":"nukebase:blocks/bauxite_ore"}},
+			"ilmenite":{"textures":{"face":"nukebase:blocks/ilmenite_ore"}},		
+			"chromite":{"textures":{"face":"nukebase:blocks/chromite_ore"}},
+			"hematite":{"textures":{"face":"minecraft:blocks/iron_ore"}},
+			"magnetite":{"textures":{"face":"nukebase:blocks/magnetite_ore"}},
+			"limonite":{"textures":{"face":"nukebase:blocks/limonite_ore"}},
+			"pyrite":{"textures":{"face":"minecraft:blocks/gold_ore"}},
+			"cobaltite":{"textures":{"face":"nukebase:blocks/cobaltite_ore"}},
+			"garnierite":{"textures":{"face":"nukebase:blocks/garnierite_ore"}},
+			"copper":{"textures":{"face":"nukebase:blocks/copper_ore"}},
+			"malachite":{"textures":{"face":"nukebase:blocks/malachite_ore"}},
+			"sphalerite":{"textures":{"face":"nukebase:blocks/sphalerite_ore"}},
+			"arsenopyrite":{"textures":{"face":"nukebase:blocks/arsenopyrite_ore"}},
+			"zircon":{"textures":{"face":"nukebase:blocks/zircon_ore"}},
+			"silver":{"textures":{"face":"nukebase:blocks/silver_ore"}},
+			"cassiterite":{"textures":{"face":"nukebase:blocks/cassiterite_ore"}},
+			"wolframite":{"textures":{"face":"nukebase:blocks/wolframite_ore"}},
+			"platinum":{"textures":{"face":"nukebase:blocks/platinum_ore"}},		
+			"gold":{"textures":{"face":"minecraft:blocks/gold_ore"}},
+			"cinnabar":{"textures":{"face":"nukebase:blocks/cinnabar_ore"}},
+			"galena":{"textures":{"face":"nukebase:blocks/galena_ore"}},
+			"bismuthinite":{"textures":{"face":"nukebase:blocks/bismuthinite_ore"}},
+			"orichalcum":{"textures":{"face":"nukebase:blocks/copper_ore"}},
+			"lignite":{"textures":{"face":"nukebase:blocks/lignite_ore"}},
+			"bituminouscoal":{"textures":{"face":"nukebase:blocks/bituminouscoal_ore"}},		
+			"anthracite":{"textures":{"face":"minecraft:blocks/coal_ore"}},
+			"sulfur":{"textures":{"face":"nukebase:blocks/sulfur_ore"}},
+			"lapislazuli":{"textures":{"face":"minecraft:blocks/lapis_ore"}},
+			"kimberlite":{"textures":{"face":"minecraft:blocks/diamond_ore"}},
+			"emerald":{"textures":{"face":"minecraft:blocks/emerald_ore"}},
+			"sapphire":{"textures":{"face":"nukebase:blocks/sapphire_ore"}},
+			"ruby":{"textures":{"face":"nukebase:blocks/ruby_ore"}},
+			"amethyst":{"textures":{"face":"nukebase:blocks/amethyst_ore"}},
+			"tigereye":{"textures":{"face":"nukebase:blocks/tigereye_ore"}}
+		}
+	}
+}

@@ -8,7 +8,9 @@
 			"north":{},
 			"south":{"y": 180},
 			"west":{"y": 270},
-			"east":{"y": 90}
+			"east":{"y": 90},
+			"up":{},
+			"down":{}
 		},
 		"has_stone":{
 			"true":{"model": "nukebase:grindstone_stone"},

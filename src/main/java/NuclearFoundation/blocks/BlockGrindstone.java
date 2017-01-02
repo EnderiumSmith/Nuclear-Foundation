@@ -36,7 +36,7 @@ public class BlockGrindstone extends BlockContainer{
 		setRegistryName("BlockGrindstone");
 		setUnlocalizedName(this.getRegistryName().toString());
 		setHardness(3.5F);
-		setHarvestLevel("pickaxe", 1);
+		setHarvestLevel("pickaxe", 0);
 		setCreativeTab(CustomCreativeTabs.TabBlocks);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(HAS_STONE, false));
 	}
@@ -56,6 +56,12 @@ public class BlockGrindstone extends BlockContainer{
     {
         worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
     }
+	@Override
+	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
+		if(worldIn.getTileEntity(pos)instanceof TileGrindstone)
+			((TileGrindstone)(worldIn.getTileEntity(pos))).dropInventory();
+		super.breakBlock(worldIn, pos, state);
+	}
 	@Override
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this,new IProperty[]{FACING,HAS_STONE});

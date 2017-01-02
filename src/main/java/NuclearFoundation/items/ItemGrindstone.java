@@ -14,6 +14,7 @@ public class ItemGrindstone extends Item{
 		setUnlocalizedName(getRegistryName().toString());
 		setMaxDamage(maxDamage);
 		setMaxStackSize(1);
+		setCreativeTab(CustomCreativeTabs.TabItems);
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel(){

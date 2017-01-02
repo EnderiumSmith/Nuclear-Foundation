@@ -60,6 +60,37 @@ public class ItemBasicSword extends ItemSword{
 				tooltip.add(ChatFormatting.DARK_GREEN+"Applies vanilla poison");
 			}
 		}
+		if(((ItemSword)stack.getItem()).getToolMaterialName().equals("Ruby")){
+			tooltip.add(ChatFormatting.DARK_RED+"Fiery Wish");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.DARK_RED+"Increases Fire Aspect by 1 level");
+			}
+		}
+		if(((ItemSword)stack.getItem()).getToolMaterialName().equals("TigerEye")){
+			tooltip.add(ChatFormatting.GOLD+"Meow");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.GOLD+"50% extra damage to creepers");
+			}
+		}
+		if(((ItemSword)stack.getItem()).getToolMaterialName().equals("Emerald")){
+			tooltip.add(ChatFormatting.GREEN+"Pure Greed");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.GREEN+"Increases Fortune and Looting by 1 level");
+			}
+		}
+		if(((ItemSword)stack.getItem()).getToolMaterialName().equals("Sapphire")){
+			tooltip.add(ChatFormatting.DARK_BLUE+"Icy Touch");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.DARK_BLUE+"Slows targets");
+				tooltip.add(ChatFormatting.DARK_BLUE+"Extra damage to fiery mobs");
+			}
+		}
+		if(((ItemSword)stack.getItem()).getToolMaterialName().equals("Amethyst")){
+			tooltip.add(ChatFormatting.DARK_PURPLE+"Psycho Cut");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.DARK_PURPLE+"50% extra damage to psychic/ender creatures");
+			}
+		}
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel(){
