@@ -1,82 +1,100 @@
 package NuclearFoundation.rendering;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
-import com.google.common.base.Function;
+import javax.vecmath.Point3f;
+
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.block.model.*;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumFacing.Axis;
+import net.minecraft.util.EnumFacing.AxisDirection;
 
 import NuclearFoundation.core.Constants;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.block.model.BakedQuad;
-import net.minecraft.client.renderer.block.model.IBakedModel;
-import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
-import net.minecraft.client.renderer.block.model.ItemOverrideList;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.renderer.vertex.VertexFormat;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.model.IModelState;
 
 public class GlowOreBakedModel implements IBakedModel{
 
 	public static final ModelResourceLocation BAKED_GLOW_ORE=new ModelResourceLocation(Constants.MODID+":GlowOre");
-	
-	public VertexFormat format;
-	public TextureAtlasSprite stone,nether,end,uranium,thorium,blazonium,terminium;
-	
-	public GlowOreBakedModel(IModelState state, VertexFormat format,
-			Function<ResourceLocation, TextureAtlasSprite> bakedTextureGetter) {
-		this.format=format;
-		stone=bakedTextureGetter.apply(new ResourceLocation("Minecraft:blocks/stone"));
-		nether=bakedTextureGetter.apply(new ResourceLocation("Minecraft:blocks/netherrack"));
-		end=bakedTextureGetter.apply(new ResourceLocation("Minecraft:blocks/endstone"));
-		uranium=bakedTextureGetter.apply(new ResourceLocation(Constants.MODID,"blocks/uranium_bits"));
-		thorium=bakedTextureGetter.apply(new ResourceLocation(Constants.MODID,"blocks/thorium_bits"));
-		blazonium=bakedTextureGetter.apply(new ResourceLocation(Constants.MODID,"blocks/blazonium_bits"));
-		terminium=bakedTextureGetter.apply(new ResourceLocation(Constants.MODID,"blocks/terminium_bits"));
-		
-	}
-    @Override
-    public List<BakedQuad> getQuads(IBlockState state, EnumFacing side, long rand) {
 
-        if (side != null) {
-            return Collections.emptyList();
-        }
-        List<BakedQuad> quads = new ArrayList<>();
-        int[] data=new int[28];
-        for(int offset=0;offset<28;offset+=7){
-        	int x,y;
-        	if(offset<=14){
-        		x=1;
-        	}
-        	else
-        		x=0;
-        	if(offset>=14&&offset<=21){
-        		y=1;
-        	}
-        	else
-        		y=0;
-        	//pos
-        	data[offset+0]=Float.floatToIntBits(x);
-        	data[offset+1]=Float.floatToIntBits(0);
-        	data[offset+2]=Float.floatToIntBits(y);
-        	//color
-        	data[offset+3]=-1;
-        	//tex
-        	data[offset + 4] = Float.floatToRawIntBits(0);
-            data[offset + 5] = Float.floatToRawIntBits(0);
-            //light
-            data[offset + 6] = 15 << 4 + 2 << 20;
-        }
-        quads.add(new BakedQuad(data, -1, side, this.stone, true, format));
-        return quads;
-    }
+	private final Map<EnumFacing, List<BakedQuad>> quads = new EnumMap<>(EnumFacing.class);
+	private final TextureAtlasSprite particle;
+
+	public GlowOreBakedModel(TextureAtlasSprite base, TextureAtlasSprite glowing) {
+		this.particle = base;
+		for (EnumFacing side : EnumFacing.VALUES) {
+			TextureAtlasSprite[] sprites = { base, glowing };
+
+			/* "magic" uv co-ords. We pick the 4 corners of a sprite (ranging from 0-16 no matter the real size of the sprite)
+			 and go around clockwise. It doesn't matter the order provided that it matches the position generator*/
+			int[][] uvs = new int[4][2];
+			uvs[0][0] = 0;
+			uvs[0][1] = 0;
+
+			uvs[1][0] = 0;
+			uvs[1][1] = 16;
+
+			uvs[2][0] = 16;
+			uvs[2][1] = 16;
+
+			uvs[3][0] = 16;
+			uvs[3][1] = 0;
+
+			List<BakedQuad> list = new ArrayList<>(2);
+			for (int faceNum = 0; faceNum < 2; faceNum++) {
+				float faceOffset = faceNum == 0 ? 0 : 0.001f;
+				// some maths to work out all of the positions
+				Point3f center = new Point3f(0.5f, 0.5f, 0.5f);
+				Point3f radius = new Point3f(
+					side.getAxis() == Axis.X ? (faceOffset + 0.5f) : (0.5f),
+					side.getAxis() == Axis.Y ? (faceOffset + 0.5f) : (0.5f),
+					side.getAxis() == Axis.Z ? (faceOffset + 0.5f) : (0.5f)
+				);
+				Point3f[] points = ModelUtil.getPointsForFace(side, center, radius);
+
+				boolean flip = side.getAxisDirection() == AxisDirection.POSITIVE;
+				if (side.getAxis() == Axis.Z) flip = !flip;
+				if (flip) {
+					Point3f[] rp = { points[3], points[2], points[1], points[0] };
+					points = rp;
+				}
+
+				// create our vertex data array
+				int[] data = new int[32];// 32 is 4 * ModelUtil.FORMAT_BLOCK_NORMAL.getNextOffset()
+				int stride = data.length / 4;
+				for (int i = 0; i < 4; i++) {
+					int offset = i * stride;
+					// pos
+					data[offset + 0] = Float.floatToIntBits(points[i].x);
+					data[offset + 1] = Float.floatToIntBits(points[i].y);
+					data[offset + 2] = Float.floatToIntBits(points[i].z);
+					// color
+					data[offset + 3] = 0xFF_FF_FF_FF; // full alpha, full all other colours (white)
+					// tex
+					data[offset + 4] = Float.floatToRawIntBits(sprites[faceNum].getInterpolatedU(uvs[i][0]));
+					data[offset + 5] = Float.floatToRawIntBits(sprites[faceNum].getInterpolatedV(uvs[i][1]));
+					// light
+					data[offset + 6] = (faceNum == 0) ? (0) : (15 << 4) + (0 << 20);
+					// normal
+					data[offset + 7] = ModelUtil.normalToPackedInt(side.getFrontOffsetX(), side.getFrontOffsetY(), side.getFrontOffsetZ());
+				}
+				list.add(new BakedQuad(data, -1, side, sprites[faceNum], true, ModelUtil.FORMAT_BLOCK_NORMAL));
+			}
+			quads.put(side, list);
+		}
+	}
+
+	@Override
+	public List<BakedQuad> getQuads(IBlockState state, EnumFacing side, long rand) {
+		if (side == null) {
+			return Collections.emptyList();
+		} else {
+			return quads.get(side);
+		}
+	}
 
 	@Override
 	public boolean isAmbientOcclusion() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
@@ -93,7 +111,7 @@ public class GlowOreBakedModel implements IBakedModel{
 	@Override
 	public TextureAtlasSprite getParticleTexture() {
 		// TODO Auto-generated method stub
-		return null;
+		return particle;
 	}
 
 	@Override
@@ -105,5 +123,4 @@ public class GlowOreBakedModel implements IBakedModel{
 	public ItemOverrideList getOverrides() {
 		return null;
 	}
-
 }

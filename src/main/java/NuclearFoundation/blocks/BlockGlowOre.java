@@ -1,5 +1,6 @@
 package NuclearFoundation.blocks;
 
+import NuclearFoundation.core.Constants;
 import NuclearFoundation.items.CustomCreativeTabs;
 import NuclearFoundation.rendering.GlowOreBakedModel;
 import net.minecraft.block.Block;
@@ -8,6 +9,8 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.BlockRenderLayer;
+
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
@@ -30,10 +33,11 @@ public class BlockGlowOre extends Block{
 		GameRegistry.register(new ItemBlock(this), getRegistryName());
 	}
 	public void initModel(){
+	    final ModelResourceLocation mrl = new ModelResourceLocation(Constants.MODID+":GlowOre_" + Type);
         StateMapperBase ignoreState = new StateMapperBase() {
             @Override
             protected ModelResourceLocation getModelResourceLocation(IBlockState iBlockState) {
-                return GlowOreBakedModel.BAKED_GLOW_ORE;
+                return mrl;
             }
         };
         ModelLoader.setCustomStateMapper(this, ignoreState);
@@ -59,4 +63,9 @@ public class BlockGlowOre extends Block{
 		}
 	}
 
+	@Override
+	public BlockRenderLayer getBlockLayer() {
+	    // needed so that the model can render fully transparent pixels
+	    return BlockRenderLayer.CUTOUT;
+	}
 }
