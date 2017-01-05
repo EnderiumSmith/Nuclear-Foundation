@@ -3,7 +3,6 @@ package NuclearFoundation.crafting;
 import NuclearFoundation.items.ItemManager;
 import NuclearFoundation.items.SetArmor;
 import NuclearFoundation.items.SetTools;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;

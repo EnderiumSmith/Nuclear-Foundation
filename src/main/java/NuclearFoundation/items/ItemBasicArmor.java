@@ -1,6 +1,5 @@
 package NuclearFoundation.items;
 
-import com.google.common.collect.Multimap;
 import com.mojang.realmsclient.gui.ChatFormatting;
 
 import NuclearFoundation.core.ArmorMaterials;
@@ -8,12 +7,12 @@ import NuclearFoundation.core.Constants;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -74,7 +73,7 @@ public class ItemBasicArmor extends ItemArmor{
 		if(((ItemArmor)stack.getItem()).getArmorMaterial()==ArmorMaterials.TigerEye){
 			tooltip.add(ChatFormatting.GOLD+"Feline Aura");
 			if(GuiScreen.isShiftKeyDown()){
-				tooltip.add(ChatFormatting.GOLD+"Blocks up to 40% of creeper damage");
+				tooltip.add(ChatFormatting.GOLD+"Blocks up to 80% of creeper damage");
 			}
 		}
 		if(((ItemArmor)stack.getItem()).getArmorMaterial()==ArmorMaterials.Emerald){
@@ -108,6 +107,17 @@ public class ItemBasicArmor extends ItemArmor{
 			}
 		}
 		return multimap;
+	}*/
+	/*@Override
+	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
+		if(!world.isRemote){
+			if(stack!=null&&stack.getMetadata()>1&&stack.getItem()instanceof ItemBasicArmor&&((ItemBasicArmor)stack.getItem()).getArmorMaterial()==ArmorMaterials.Emerald){
+				if((player).experienceTotal>1){
+					player.addExperience(-1);
+					stack.setItemDamage(stack.getItemDamage()-2);
+				}	
+			}
+		}
 	}*/
 	@SideOnly(Side.CLIENT)
 	@Override

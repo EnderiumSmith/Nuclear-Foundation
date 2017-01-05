@@ -1,12 +1,6 @@
 package NuclearFoundation.rendering;
 
-import NuclearFoundation.core.Constants;
-import net.minecraft.client.resources.IResourceManager;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.ICustomModelLoader;
-import net.minecraftforge.client.model.IModel;
-
-public class GlowOreModelLoader implements ICustomModelLoader{
+/*public class GlowOreModelLoader implements ICustomModelLoader{
 
 	public static final GlowOreModel GLOW_MODEL=new GlowOreModel();
 	
@@ -26,4 +20,4 @@ public class GlowOreModelLoader implements ICustomModelLoader{
 		return GLOW_MODEL;
 	}
 
-}
+}*/

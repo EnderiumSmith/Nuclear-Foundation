@@ -18,38 +18,47 @@ public class BlockRegistry {
 	public static BlockNetherOre NetherOreBlock0=new BlockNetherOre("NetherOre", 0);
 	public static BlockNetherOre NetherOreBlock1=new BlockNetherOre("NetherOre", 1);
 	public static BlockGlowOre UraniumOre=new BlockGlowOre("Pitchblende");
+	public static BlockGlowOre ThoriumOre=new BlockGlowOre("Thorite");
+	public static BlockGlowOre BlazoniumOre=new BlockGlowOre("Blazonium");
+	public static BlockGlowOre TerminiumOre=new BlockGlowOre("Terminium");
 	
 	public static void registerBlocks(){
 		AlStructure.register();
 		WallOfMexic.register();
+		GrindStone.register();
+		MetalWoker.register();
 		MetalBlock0.register();
 		MetalBlock1.register();
 		MetalBlock2.register();
 		MetalBlock3.register();
-		GrindStone.register();
-		MetalWoker.register();
 		OreBlock0.register();
 		OreBlock1.register();
 		OreBlock2.register();
 		NetherOreBlock0.register();
 		NetherOreBlock1.register();
 		UraniumOre.register();
+		ThoriumOre.register();
+		BlazoniumOre.register();
+		TerminiumOre.register();
 	}
 	public static void initModel(){
 		AlStructure.initModel();
 		WallOfMexic.initModel();
-		//MetalBlock0.initModel();
-		//MetalBlock1.initModel();
-		//MetalBlock2.initModel();
-		//MetalBlock3.initModel();
-		//OreBlock0.initModel();
-		//OreBlock1.initModel();
-		//OreBlock2.initModel();
-		//NetherOreBlock0.initModel();
-		//NetherOreBlock1.initModel();
 		GrindStone.initModel();
-		//MetalWoker.initModel();
+		MetalWoker.initModel();
+		MetalBlock0.initModel();
+		MetalBlock1.initModel();
+		MetalBlock2.initModel();
+		MetalBlock3.initModel();
+		OreBlock0.initModel();
+		OreBlock1.initModel();
+		OreBlock2.initModel();
+		NetherOreBlock0.initModel();
+		NetherOreBlock1.initModel();
 		UraniumOre.initModel();
+		ThoriumOre.initModel();
+		BlazoniumOre.initModel();
+		TerminiumOre.initModel();
 	}
 	public static void initOredict(){
 		MetalBlock0.initOredict();

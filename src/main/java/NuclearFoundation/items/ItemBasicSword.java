@@ -69,7 +69,7 @@ public class ItemBasicSword extends ItemSword{
 		if(((ItemSword)stack.getItem()).getToolMaterialName().equals("TigerEye")){
 			tooltip.add(ChatFormatting.GOLD+"Meow");
 			if(GuiScreen.isShiftKeyDown()){
-				tooltip.add(ChatFormatting.GOLD+"50% extra damage to creepers");
+				tooltip.add(ChatFormatting.GOLD+"2x damage to creepers");
 			}
 		}
 		if(((ItemSword)stack.getItem()).getToolMaterialName().equals("Emerald")){
@@ -82,13 +82,13 @@ public class ItemBasicSword extends ItemSword{
 			tooltip.add(ChatFormatting.DARK_BLUE+"Icy Touch");
 			if(GuiScreen.isShiftKeyDown()){
 				tooltip.add(ChatFormatting.DARK_BLUE+"Slows targets");
-				tooltip.add(ChatFormatting.DARK_BLUE+"Extra damage to fiery mobs");
+				tooltip.add(ChatFormatting.DARK_BLUE+"Extra damage to nether mobs");
 			}
 		}
 		if(((ItemSword)stack.getItem()).getToolMaterialName().equals("Amethyst")){
 			tooltip.add(ChatFormatting.DARK_PURPLE+"Psycho Cut");
 			if(GuiScreen.isShiftKeyDown()){
-				tooltip.add(ChatFormatting.DARK_PURPLE+"50% extra damage to psychic/ender creatures");
+				tooltip.add(ChatFormatting.DARK_PURPLE+"Extra damage to psychic/ender creatures");
 			}
 		}
 	}

@@ -10,18 +10,21 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class MetalBlock extends BlockMeta{
 
 	public final int Meta;
-	MetadataItem itemblock;
+	public MetadataItem itemblock;
 	public static final PropertyEnum<EnumType> TYPE=PropertyEnum.create("type", MetalBlock.EnumType.class);
+	//TODO filter type with predicate<T>
 	public MetalBlock(String name,int metadata) {
 		super(Material.IRON);
 		this.Meta=metadata;
@@ -33,7 +36,8 @@ public class MetalBlock extends BlockMeta{
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumType.MISSINGNO));
 	}
 	public void initModel() {
-		itemblock.initModel();
+		for(int i=0;i<16;i++)
+			ModelLoader.setCustomModelResourceLocation(itemblock, i, new ModelResourceLocation(Constants.MODID+":metal_block_item", "inventory"));
 	}
 	public void register() {
 		GameRegistry.register(this);
@@ -87,10 +91,10 @@ public class MetalBlock extends BlockMeta{
 		return EnumType.MISSINGNO.getOreName();
 	}
 	public enum EnumType implements IStringSerializable{
-		BORON(0,"Boron"),
+		//BORON(0,"Boron"),
 		ALUMINIUM(1,"Aluminium"),
 		TITANIUM(2,"Titanium"),
-		CROMIUM(3,"Chromium"),
+		ChROMIUM(3,"Chromium"),
 		COBALT(4,"Cobalt"),
 		NICKEl(5,"Nickel"),
 		COPPER(6,"Copper"),
@@ -100,21 +104,21 @@ public class MetalBlock extends BlockMeta{
 		SILVER(10,"Silver"),
 		TIN(11,"Tin"),
 		WOLFRAM(12,"Wolfram"),
-		OSMIUM(13,"Osmium"),
+		//OSMIUM(13,"Osmium"),
 		PLATINUM(14,"Platinum"),
 		LEAD(15,"Lead"),
 		BISMUTH(16,"Bismuth"),
 		THORIUM(17,"Thorium"),
 		URANIUM(18,"Uranium"),
 		MITHRIL(19,"Mithril"),
-		ADAMANTINE(20,"Adamantine"),
+		//ADAMANTINE(20,"Adamantine"),
 		PROMETHEUM(21,"Prometheum"),
 		ORICHALCUM(22,"Orichalcum"),
 		BLAZONIUM(23,"Blazonium"),
 		TERMINIUM(24,"Terminium"),
 		DURALUMINIUM(25,"Duraluminium"),
 		ALUMITE(26,"Alumite"),
-		NICHROME(27,"Nichrome"),
+		//NICHROME(27,"Nichrome"),
 		PIGIRON(28,"PigIron"),
 		STEEL(29,"Steel"),
 		STAINLESSSTEEL(30,"StainlessSteel"),

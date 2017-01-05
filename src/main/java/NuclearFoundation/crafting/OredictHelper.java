@@ -1,7 +1,5 @@
 package NuclearFoundation.crafting;
 
-import net.minecraftforge.oredict.OreDictionary;
-
 public class OredictHelper {
 	
 	public static String[] getOredictForIngot(String name){
@@ -129,6 +127,5 @@ public class OredictHelper {
 		}
 		}
 	}
-
 	
 }

@@ -2,7 +2,6 @@ package NuclearFoundation.blocks;
 
 import NuclearFoundation.core.Constants;
 import NuclearFoundation.items.CustomCreativeTabs;
-import NuclearFoundation.rendering.GlowOreBakedModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

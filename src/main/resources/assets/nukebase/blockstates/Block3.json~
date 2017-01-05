@@ -1,9 +1,61 @@
 {
-   "defaults":{
-	"model":"nukebase:MetalBlock"
+	"forge_marker": 1,
+	"defaults":{
+		"model": "nukebase:metal_block",
+		"textures":{"face":"nukebase:blocks/metal_block"}
 	},
-   "variants": {
-       "type": {
-	 "boron":{"textures":{"front": "nukebase:blocks/block_boron"}}
+	"variants":{
+		"type":{
+			"aluminium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"titanium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"chromium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"cobalt":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"nickel":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"copper":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"zinc":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"arsenic":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"zirconium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"silver":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"tin":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"wolfram":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"platinum":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"lead":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"bismuth":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"thorium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"uranium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"mithril":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"prometheum":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"orichalcum":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"blazonium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"terminium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"duraluminium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"alumite":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"pigiron":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"steel":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"stainlesssteel":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"damascussteel":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"tearsteel":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"blacksteel":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"bluesteel":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"redsteel":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"stellite":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"invar":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"brass":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"aluminiumbrass":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"bismuthbrass":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"bronze":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"blackbronze":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"mithrilbronze":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"signalum":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"teslium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"vibranium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"sterlingsilver":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"lumium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"enderium":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"rosegold":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"tungstensteel":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"alumina":{"textures":{"face":"nukebase:blocks/metal_block"}},
+			"missingno":{"textures":{"face":"nukebase:blocks/metal_block"}}
+			}
 	}
 }

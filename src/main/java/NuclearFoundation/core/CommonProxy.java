@@ -13,6 +13,7 @@ import NuclearFoundation.networking.HandlerMetalWorker;
 import NuclearFoundation.networking.MessageMetalWorker;
 import NuclearFoundation.tile_entity.TileGrindstone;
 import NuclearFoundation.tile_entity.TileMetalworker;
+import NuclearFoundation.world_gen.WorldGen;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -46,6 +47,7 @@ public class CommonProxy {
 		ToolCrafting.init();
 		ItemCrafting.init();
 		GrindStoneCrafting.INSTANCE.initRecipes();
+		GameRegistry.registerWorldGenerator(new WorldGen(), 0);
 		MinecraftForge.EVENT_BUS.register(new EventHandler());
 	}
 	public void postInit(FMLPostInitializationEvent e){

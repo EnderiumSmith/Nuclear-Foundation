@@ -183,6 +183,16 @@ public class ItemCrafting {
 				'G',"gearWood",
 				'S',new ItemStack(Blocks.STONE, 1, 6)
 			}));
+		//metalworker
+		GameRegistry.addRecipe(new ShapedOreRecipe(BlockRegistry.MetalWoker, new Object[]{
+				"IPI",
+				"IAI",
+				"ICI",
+				'I',"ingotIron",
+				'P',Blocks.PISTON,
+				'C',"workbench",
+				'A',Blocks.ANVIL
+		}));
 		//dust
 		ItemComplexComponent dust=ItemManager.Dust;
 		String[] string=OredictHelper.getOredictForIngot("Aluminium");

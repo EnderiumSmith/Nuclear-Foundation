@@ -13,7 +13,6 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
@@ -24,7 +23,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -211,7 +209,7 @@ public class BlockOre extends BlockMeta{
 		}
 		return EnumType.MISSINGNO.getOreName();
 	}
-	private enum EnumType implements IStringSerializable{
+	public enum EnumType implements IStringSerializable{
 		BAUXITE(0,"Bauxite",1),
 		ILMENITE(1,"Ilmenite",2),
 		CHROMITE(2,"Chromite",2),
