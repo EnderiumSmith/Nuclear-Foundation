@@ -42,24 +42,20 @@ public class BlockGlowOre extends Block{
         ModelLoader.setCustomStateMapper(this, ignoreState);
 	}
 	public void initOreDict(){
-		switch(Type){
-		case("Pitchblende"):{
+
+		if(Type.equals("Pitchblende")){
 			OreDictionary.registerOre("orePitchblende", this);
 			OreDictionary.registerOre("oreUranium", this);
-			break;
-		}
-		case("Thorite"):{
+		} else if(Type.equals("Thorite")){
 			OreDictionary.registerOre("oreThorite", this);
 			OreDictionary.registerOre("oreThorium", this);
-		}
-		case("Blazonium"):{
+		} else if(Type.equals("Blazonium")){
 			OreDictionary.registerOre("oreBlazonium", this);
-		}
-		case("Terminium"):{
+		} else if(Type.equals("Terminium")){
 			OreDictionary.registerOre("oreTerminium", this);
 			OreDictionary.registerOre("oreEinsteinium", this);
 		}
-		}
+
 	}
 
 	@Override
