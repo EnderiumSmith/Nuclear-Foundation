@@ -1,5 +1,8 @@
 package NuclearFoundation.blocks;
 
+import NuclearFoundation.blocks.magma_crucible.BlockCrucibleController;
+import NuclearFoundation.blocks.magma_crucible.MagmaCrucibleIOBlock;
+import NuclearFoundation.blocks.magma_crucible.MagmaCrucibleStructureBlock;
 import net.minecraft.block.material.Material;
 
 public class BlockRegistry {
@@ -12,6 +15,7 @@ public class BlockRegistry {
 	public static MetalBlock MetalBlock3=new MetalBlock("Block", 3);
 	public static BlockGrindstone GrindStone=new BlockGrindstone();
 	public static BlockMetalworker MetalWoker=new BlockMetalworker();
+	public static BlockSirlingGenerator Stirling=new BlockSirlingGenerator();
 	public static BlockOre OreBlock0=new BlockOre("ore", 0);
 	public static BlockOre OreBlock1=new BlockOre("ore", 1);
 	public static BlockOre OreBlock2=new BlockOre("ore", 2);
@@ -21,12 +25,34 @@ public class BlockRegistry {
 	public static BlockGlowOre ThoriumOre=new BlockGlowOre("Thorite");
 	public static BlockGlowOre BlazoniumOre=new BlockGlowOre("Blazonium");
 	public static BlockGlowOre TerminiumOre=new BlockGlowOre("Terminium");
+	//magma crucible
+	public static BlockCrucibleController CrucibleController=new BlockCrucibleController();
+	public static MagmaCrucibleStructureBlock CrucibleBase=new MagmaCrucibleStructureBlock("crucible_base", 0);
+	public static MagmaCrucibleStructureBlock CrucibleRF=new MagmaCrucibleStructureBlock("crucible_rf", 1);
+	public static MagmaCrucibleStructureBlock CrucibleT=new MagmaCrucibleStructureBlock("crucible_t", 2);
+	public static MagmaCrucibleStructureBlock CrucibleRedNik=new MagmaCrucibleStructureBlock("crucible_rednik", 3);
+	public static MagmaCrucibleIOBlock CrucibleIOBase=new MagmaCrucibleIOBlock("crucible_io_base", 0);
+	public static MagmaCrucibleIOBlock CrucibleIORF=new MagmaCrucibleIOBlock("crucible_io_rf", 1);
+	public static MagmaCrucibleIOBlock CrucibleIOT=new MagmaCrucibleIOBlock("crucible_io_t", 2);
+	public static MagmaCrucibleIOBlock CrucibleIORedNik=new MagmaCrucibleIOBlock("crucible_io_rednik", 3);
 	
 	public static void registerBlocks(){
 		AlStructure.register();
 		WallOfMexic.register();
 		GrindStone.register();
 		MetalWoker.register();
+		Stirling.register();
+		//
+		CrucibleController.register();
+		CrucibleBase.register();
+		CrucibleIOBase.register();
+		CrucibleRF.register();
+		CrucibleIORF.register();
+		CrucibleT.register();
+		CrucibleIOT.register();
+		CrucibleRedNik.register();
+		CrucibleIORedNik.register();
+		//
 		MetalBlock0.register();
 		MetalBlock1.register();
 		MetalBlock2.register();

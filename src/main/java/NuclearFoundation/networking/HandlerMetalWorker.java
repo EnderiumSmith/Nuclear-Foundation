@@ -17,7 +17,7 @@ public class HandlerMetalWorker implements IMessageHandler<MessageMetalWorker, I
 		
 	}
 	@Override
-	public IMessage onMessage(MessageMetalWorker message, MessageContext ctx) {
+	public IMessage onMessage(final MessageMetalWorker message, final MessageContext ctx) {
 		IThreadListener mainThread=(WorldServer)ctx.getServerHandler().playerEntity.worldObj;
 		mainThread.addScheduledTask(new Runnable() {
 			public void run() {

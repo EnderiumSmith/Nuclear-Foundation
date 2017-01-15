@@ -5,10 +5,10 @@
   "description": "",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "https://github.com/EnderiumSmith/Nuclear-Foundation",
+  "url": "",
   "updateUrl": "",
-  "authorList": ["EnderiumSmith"],
-  "credits": "EnderiumSmith(author),DaMachinator(artist),AlexIIL(glow ore code),Forge",
+  "authorList": [""],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

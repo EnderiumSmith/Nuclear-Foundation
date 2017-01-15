@@ -147,6 +147,9 @@ public class ItemRegistry {
 	public static ItemBasic Amethyst=new ItemBasic("Amethyst");
 	public static ItemBasic Ruby=new ItemBasic("Ruby");
 	public static ItemBasic TigerEye=new ItemBasic("TigerEye");
+	public static ItemBasic Pyrotheum=new ItemBasic("Pyrotheum");
+	//component
+	public static ItemPowerComponent Components=new ItemPowerComponent();
 		
 	public static void registerItems(){
 		ItemManager.registerItems();
@@ -168,6 +171,8 @@ public class ItemRegistry {
 		Amethyst.register();
 		Ruby.register();
 		TigerEye.register();
+		Components.register();
+		Pyrotheum.register();
 	}
 	@SideOnly(Side.CLIENT)
 	public static void initItemModels(){
@@ -176,6 +181,7 @@ public class ItemRegistry {
 		TigerEye.initModel();
 		Sapphire.initModel();
 		Amethyst.initModel();
+		Components.initModel();
 	}
 	public static void initOreDict(){
 		ItemManager.registerOreDict();
@@ -183,5 +189,6 @@ public class ItemRegistry {
 		OreDictionary.registerOre("gemTigerEye", TigerEye);
 		OreDictionary.registerOre("gemAmethyst", Amethyst);
 		OreDictionary.registerOre("gemSapphire", Sapphire);
+		OreDictionary.registerOre("dustPyrotheum", Pyrotheum);
 	}
 }

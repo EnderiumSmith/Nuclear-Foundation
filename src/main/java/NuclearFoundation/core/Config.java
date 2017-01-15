@@ -54,6 +54,7 @@ public class Config {
 	//end
 	public static int terminium=6;
 	
+	
 	public static void readCfg(){
 		Configuration cfg=CommonProxy.config;
 		try{

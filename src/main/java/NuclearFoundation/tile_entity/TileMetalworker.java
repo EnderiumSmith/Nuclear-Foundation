@@ -4,6 +4,7 @@ import NuclearFoundation.core.Config;
 import NuclearFoundation.items.ItemManager;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -154,6 +155,13 @@ public class TileMetalworker extends TileEntity{
 			currentRecipe=recipe;
 			Progress=0;
 			return true;
+		}
+	}
+	public void dropInventory(){
+		for(int i=0;i<inventory.length;i++){
+			if(inventory[i]!=null){
+				InventoryHelper.spawnItemStack(this.worldObj, this.pos.getX(), this.pos.getY(), this.pos.getZ(), inventory[i]);
+			}
 		}
 	}
 	@Override
