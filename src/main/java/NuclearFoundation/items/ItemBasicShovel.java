@@ -94,6 +94,12 @@ public class ItemBasicShovel extends ItemSpade{
 				tooltip.add(ChatFormatting.DARK_PURPLE+"Extra damage to psychic/ender creatures");
 			}
 		}
+		if(((ItemTool)stack.getItem()).getToolMaterialName().equals("Terminium")){
+			tooltip.add(ChatFormatting.DARK_PURPLE+"Ender Pulse");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.DARK_PURPLE+"Teleports hit entitys");
+			}
+		}
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel(){

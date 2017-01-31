@@ -7,6 +7,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.BlockRenderLayer;
 
@@ -40,6 +41,7 @@ public class BlockGlowOre extends Block{
             }
         };
         ModelLoader.setCustomStateMapper(this, ignoreState);
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(Constants.MODID+Type,"inventory"));
 	}
 	public void initOreDict(){
 		switch(Type){

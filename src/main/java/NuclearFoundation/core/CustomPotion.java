@@ -27,6 +27,14 @@ public class CustomPotion extends Potion{
 			int j = 25 >> amplifier+1;
             return j > 0 ? duration % j == 0 : true;
 		}
+		if(this==PotionRegistry.CarbonMonoxyde){
+			int j = 25 >> amplifier;
+            return j > 0 ? duration % j == 0 : true;
+		}
+		if(this==PotionRegistry.Poison){
+			int j = 25 >> amplifier;
+            return j > 0 ? duration % j == 0 : true;
+		}
 		return true;
 	}
 	
@@ -47,6 +55,12 @@ public class CustomPotion extends Potion{
 				entity.attackEntityFrom(Poison, 1);
 			}
 		}
+		if(this==PotionRegistry.CarbonMonoxyde){
+			entity.attackEntityFrom(DamageSource.drown, 2);
+		}
+		if(this==PotionRegistry.Poison){
+			entity.attackEntityFrom(Poison, 1);
+		}
 	}
 	@Override
 	public void applyAttributesModifiersToEntity(EntityLivingBase entity,
@@ -60,9 +74,13 @@ public class CustomPotion extends Potion{
 		if(this==PotionRegistry.Hydrargyrum){
 			entity.getActivePotionEffect(PotionRegistry.Hydrargyrum).getCurativeItems().clear();
 		}
+		if(this==PotionRegistry.CarbonMonoxyde){
+			entity.getActivePotionEffect(PotionRegistry.CarbonMonoxyde).getCurativeItems().clear();
+		}
 	}
 	
 	public static DamageSource Radiation=new DamageSource("radiation").setDamageBypassesArmor().setDamageIsAbsolute();
 	public static DamageSource Poison=new DamageSource("poison").setDamageBypassesArmor();
+	public static DamageSource Freeze=new DamageSource("freeze").setDamageBypassesArmor();
 
 }

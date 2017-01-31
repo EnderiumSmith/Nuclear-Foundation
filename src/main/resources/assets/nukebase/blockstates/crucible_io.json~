@@ -1,0 +1,11 @@
+{
+	"forge_marker": 1,
+	"defaults":{
+		"model": "nukebase:block_base",
+		"textures":{
+			"top":"nukebase:blocks/crucible_top",
+			"side":"nukebase:blocks/crucible_side_base",
+			"bottom":"nukebase:blocks/crucible_bottom"
+		}
+	}
+}

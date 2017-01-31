@@ -11,6 +11,7 @@ import net.minecraft.entity.boss.EntityDragon;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityGuardian;
 import net.minecraft.entity.monster.EntityShulker;
+import net.minecraft.entity.monster.EntitySnowman;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemArmor;
@@ -23,9 +24,11 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
+import net.minecraftforge.event.entity.living.EnderTeleportEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 public class EventHandler {
 	
@@ -52,16 +55,34 @@ public class EventHandler {
 				if(event.getSource().getSourceOfDamage()instanceof EntityLivingBase&&(event.getSource().getSourceOfDamage()instanceof EntityShulker||
 						event.getSource().getSourceOfDamage()instanceof EntityDragon||isBiomeMob((EntityLivingBase)event.getSource().getSourceOfDamage(), "sky"))){
 					float i=getPsychicMultiplier((EntityPlayer)event.getEntity());
-					event.setAmount(event.getAmount()*i);
-					EntityLivingBase attacker=(EntityLivingBase)event.getSource().getSourceOfDamage();
-					int j=attacker.hurtResistantTime;
-					attacker.hurtResistantTime=0;
-					attacker.attackEntityFrom(DamageSource.causeMobDamage(attacker), event.getAmount()*(1F-i));
-					attacker.hurtResistantTime=j;
+					if(i!=1){
+						event.setAmount(event.getAmount()*i);
+						EntityLivingBase attacker=(EntityLivingBase)event.getSource().getSourceOfDamage();
+						int j=attacker.hurtResistantTime;
+						attacker.hurtResistantTime=0;
+						attacker.attackEntityFrom(DamageSource.causeMobDamage(attacker), event.getAmount()*(1F-i));
+						attacker.hurtResistantTime=j;
+					}
 				}
 			}
 			if(event.getSource().isExplosion()&&event.getSource().getSourceOfDamage()instanceof EntityCreeper){
 				event.setAmount(event.getAmount()*getCreeperMultiplier((EntityPlayer)event.getEntity()));
+			}
+			if(event.getSource().getSourceOfDamage()!=null||event.getSource().getDamageType().equals("inFire")||
+					event.getSource().getDamageType().equals("lightningBolt")||event.getSource().getDamageType().equals("lava")||
+					event.getSource().getDamageType().equals("inWall")||event.getSource().getDamageType().equals("drown")||
+					event.getSource().getDamageType().equals("cactus")){
+				if(rand.nextFloat()<getTeleportMultiplier((EntityPlayer)event.getEntityLiving())){
+					for(int i=0;i<64;i++){
+						boolean t=MethodUtil.teleportEntityLivingRandomly(event.getEntityLiving(), 32, 16);
+						if(t){
+							if(event.getSource().isProjectile()){
+								event.setCanceled(true);
+							}
+							break;
+						}
+					}
+				}
 			}
 		}
 		//weapon
@@ -269,8 +290,57 @@ public class EventHandler {
 					}
 				}
 			}
+			if(event.getEntityLiving()!=null){
+				ItemStack item=((EntityPlayer)(event.getSource().getSourceOfDamage())).getHeldItemMainhand();
+				if(item!=null){
+					if(item.getItem()instanceof ItemTool){
+						if(((ItemTool)(item.getItem())).getToolMaterial()==ToolMaterials.Terminium){
+							for(int i=0;i<64;i++){
+								boolean t=MethodUtil.teleportEntityLivingRandomly(event.getEntityLiving(), 32, 16);
+								if(t) break;
+							}
+						}
+							
+					}
+					if(item.getItem()instanceof ItemSword){
+						if(((ItemSword)(item.getItem())).getToolMaterialName().equals("Terminium")){
+							for(int i=0;i<64;i++){
+								boolean t=MethodUtil.teleportEntityLivingRandomly(event.getEntityLiving(), 32, 16);
+								if(t) break;
+							}
+						}
+							
+					}
+					if(item.getItem()instanceof ItemHoe){
+						if(((ItemHoe)(item.getItem())).getMaterialName().equals("Terminium")){
+							for(int i=0;i<64;i++){
+								boolean t=MethodUtil.teleportEntityLivingRandomly(event.getEntityLiving(), 32, 16);
+								if(t) break;
+							}
+						}
+							
+					}
+				}
+			}
 		}
 
+	}
+	@SubscribeEvent
+	public void onEnderTeleport(EnderTeleportEvent event){
+		if(event.getAttackDamage()>0&&event.getEntity()instanceof EntityPlayer){
+			ItemStack armor=((EntityPlayer)event.getEntity()).inventory.armorInventory[0];
+			if(armor!=null&&armor.getItem() instanceof ItemArmor&&((ItemArmor) armor.getItem()).getArmorMaterial()==ArmorMaterials.Terminium){
+				event.setAttackDamage(0);
+			}
+		}
+	}
+	@SubscribeEvent
+	public static void Vazkii_made_Greg_take_his_TE_ore_and_shove_them_in_his_behind(PlayerTickEvent event){
+		if(event.player.getName().toLowerCase().equals("eladkay")){
+			if((event.player.getActivePotionEffect(PotionRegistry.Arsenic))==null){
+				event.player.addPotionEffect(new PotionEffect(PotionRegistry.Arsenic, 1000000000));
+			}
+		}
 	}
 	public float getTearMultiplier(EntityPlayer player){
 		float tear=1F;
@@ -327,6 +397,15 @@ public class EventHandler {
 				creep-=0.2F;
 		}
 		return creep;
+	}
+	public float getTeleportMultiplier(EntityPlayer player){
+		float ender=0F;
+		for(byte i=0;i<4;i++){
+			ItemStack armor=player.inventory.armorInventory[i];
+			if(armor!=null&&armor.getItem() instanceof ItemArmor&&((ItemArmor) armor.getItem()).getArmorMaterial()==ArmorMaterials.Terminium)
+				ender+=0.25F;
+		}
+		return ender;
 	}
 	public boolean isBiomeMob(EntityLivingBase e,String b){
 		for(EnumCreatureType creatureType : EnumCreatureType.values()) {

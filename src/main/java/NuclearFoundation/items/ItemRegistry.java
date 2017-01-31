@@ -171,8 +171,8 @@ public class ItemRegistry {
 		Amethyst.register();
 		Ruby.register();
 		TigerEye.register();
-		Components.register();
-		Pyrotheum.register();
+		//Components.register();
+		//Pyrotheum.register();
 	}
 	@SideOnly(Side.CLIENT)
 	public static void initItemModels(){
@@ -181,7 +181,7 @@ public class ItemRegistry {
 		TigerEye.initModel();
 		Sapphire.initModel();
 		Amethyst.initModel();
-		Components.initModel();
+		//Components.initModel();
 	}
 	public static void initOreDict(){
 		ItemManager.registerOreDict();

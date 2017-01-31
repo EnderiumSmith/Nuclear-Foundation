@@ -4,6 +4,7 @@ import NuclearFoundation.blocks.magma_crucible.BlockCrucibleController;
 import NuclearFoundation.blocks.magma_crucible.MagmaCrucibleIOBlock;
 import NuclearFoundation.blocks.magma_crucible.MagmaCrucibleStructureBlock;
 import net.minecraft.block.material.Material;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class BlockRegistry {
 	
@@ -16,6 +17,7 @@ public class BlockRegistry {
 	public static BlockGrindstone GrindStone=new BlockGrindstone();
 	public static BlockMetalworker MetalWoker=new BlockMetalworker();
 	public static BlockSirlingGenerator Stirling=new BlockSirlingGenerator();
+	public static BlockCryogenicCompressor Cryo=new BlockCryogenicCompressor();
 	public static BlockOre OreBlock0=new BlockOre("ore", 0);
 	public static BlockOre OreBlock1=new BlockOre("ore", 1);
 	public static BlockOre OreBlock2=new BlockOre("ore", 2);
@@ -25,6 +27,7 @@ public class BlockRegistry {
 	public static BlockGlowOre ThoriumOre=new BlockGlowOre("Thorite");
 	public static BlockGlowOre BlazoniumOre=new BlockGlowOre("Blazonium");
 	public static BlockGlowOre TerminiumOre=new BlockGlowOre("Terminium");
+	public static BlockDryIce DryIce=new BlockDryIce();
 	//magma crucible
 	public static BlockCrucibleController CrucibleController=new BlockCrucibleController();
 	public static MagmaCrucibleStructureBlock CrucibleBase=new MagmaCrucibleStructureBlock("crucible_base", 0);
@@ -35,6 +38,11 @@ public class BlockRegistry {
 	public static MagmaCrucibleIOBlock CrucibleIORF=new MagmaCrucibleIOBlock("crucible_io_rf", 1);
 	public static MagmaCrucibleIOBlock CrucibleIOT=new MagmaCrucibleIOBlock("crucible_io_t", 2);
 	public static MagmaCrucibleIOBlock CrucibleIORedNik=new MagmaCrucibleIOBlock("crucible_io_rednik", 3);
+	//vent
+	public static BlockAtmosphericVent Vent=new BlockAtmosphericVent(0);
+	public static BlockAtmosphericVent Vent_RF=new BlockAtmosphericVent(1);
+	public static BlockAtmosphericVent Vent_T=new BlockAtmosphericVent(2);
+	public static BlockAtmosphericVent Vent_RF_T=new BlockAtmosphericVent(3);
 	
 	public static void registerBlocks(){
 		AlStructure.register();
@@ -42,6 +50,11 @@ public class BlockRegistry {
 		GrindStone.register();
 		MetalWoker.register();
 		Stirling.register();
+		Cryo.register();
+		Vent.register();
+		Vent_RF.register();
+		Vent_T.register();
+		Vent_RF_T.register();
 		//
 		CrucibleController.register();
 		CrucibleBase.register();
@@ -66,6 +79,7 @@ public class BlockRegistry {
 		ThoriumOre.register();
 		BlazoniumOre.register();
 		TerminiumOre.register();
+		DryIce.register();
 	}
 	public static void initModel(){
 		AlStructure.initModel();
@@ -76,11 +90,11 @@ public class BlockRegistry {
 		MetalBlock1.initModel();
 		MetalBlock2.initModel();
 		MetalBlock3.initModel();
-		OreBlock0.initModel();
-		OreBlock1.initModel();
-		OreBlock2.initModel();
-		NetherOreBlock0.initModel();
-		NetherOreBlock1.initModel();
+		//OreBlock0.initModel();
+		//OreBlock1.initModel();
+		//OreBlock2.initModel();
+		//NetherOreBlock0.initModel();
+		//NetherOreBlock1.initModel();
 		UraniumOre.initModel();
 		ThoriumOre.initModel();
 		BlazoniumOre.initModel();
@@ -96,5 +110,6 @@ public class BlockRegistry {
 		OreBlock2.initOredict();
 		NetherOreBlock0.initOredict();
 		NetherOreBlock1.initOredict();
+		OreDictionary.registerOre("dryice", DryIce);
 	}
 }

@@ -1,0 +1,412 @@
+tile.nukebase:crucible_base.name=Magma Crucible Base
+tile.nukebase:crucible_rednik.name=Rednik Coil
+
+tile.nukebase:BlockMetalworker.name=Metalworker
+tile.nukebase:BlockGrindstone.name=Grindstone
+
+itemGroup.Items=Nuclear Foundation: Items
+itemGroup.Blocks=Nuclear Foundation: Blocks
+itemGroup.Tools=Nuclear Foundation: Tools
+itemGroup.Armor=Nuclear Foundation: Armor
+itemGroup.Materials=Nuclear Foundation: Materials
+
+item.nukebase:helmTitanium.name=Titanium Helmet
+item.nukebase:chestTitanium.name=Titanium Chestplate
+item.nukebase:legsTitanium.name=Titanium Leggings
+item.nukebase:bootsTitanium.name=Titanium Boots
+item.nukebase:swordTitanium.name=Titanium Sword
+item.nukebase:pickTitanium.name=Titanium Pickaxe
+item.nukebase:axeTitanium.name=Titanium Axe
+item.nukebase:shovelTitanium.name=Titanium Shovel
+item.nukebase:hoeTitanium.name=Titanium Hoe
+item.nukebase:shearsTitanium.name=Titanium Shears
+
+item.nukebase:helmCopper.name=Copper Helmet
+item.nukebase:chestCopper.name=Copper Chestplate
+item.nukebase:legsCopper.name=Copper Leggings
+item.nukebase:bootsCopper.name=Copper Boots
+item.nukebase:swordCopper.name=Copper Sword
+item.nukebase:pickCopper.name=Copper Pickaxe
+item.nukebase:axeCopper.name=Copper Axe
+item.nukebase:shovelCopper.name=Copper Shovel
+item.nukebase:hoeCopper.name=Copper Hoe
+item.nukebase:shearsCopper.name=Copper Shears
+
+item.nukebase:helmSilver.name=Silver Helmet
+item.nukebase:chestSilver.name=Silver Chestplate
+item.nukebase:legsSilver.name=Silver Leggings
+item.nukebase:bootsSilver.name=Silver Boots
+item.nukebase:swordSilver.name=Silver Sword
+item.nukebase:pickSilver.name=Silver Pickaxe
+item.nukebase:axeSilver.name=Silver Axe
+item.nukebase:shovelSilver.name=Silver Shovel
+item.nukebase:hoeSilver.name=Silver Hoe
+item.nukebase:shearsSilver.name=Silver Shears
+
+item.nukebase:helmPlatinum.name=Platinum Helmet
+item.nukebase:chestPlatinum.name=Platinum Chestplate
+item.nukebase:legsPlatinum.name=Platinum Leggings
+item.nukebase:bootsPlatinum.name=Platinum Boots
+item.nukebase:swordPlatinum.name=Platinum Sword
+item.nukebase:pickPlatinum.name=Platinum Pickaxe
+item.nukebase:axePlatinum.name=Platinum Axe
+item.nukebase:shovelPlatinum.name=Platinum Shovel
+item.nukebase:hoePlatinum.name=Platinum Hoe
+item.nukebase:shearsPlatinum.name=Platinum Shears
+
+item.nukebase:helmMithril.name=Mithril Helmet
+item.nukebase:chestMithril.name=Mithril Chestplate
+item.nukebase:legsMithril.name=Mithril Leggings
+item.nukebase:bootsMithril.name=Mithril Boots
+item.nukebase:swordMithril.name=Mithril Sword
+item.nukebase:pickMithril.name=Mithril Pickaxe
+item.nukebase:axeMithril.name=Mithril Axe
+item.nukebase:shovelMithril.name=Mithril Shovel
+item.nukebase:hoeMithril.name=Mithril Hoe
+item.nukebase:shearsMithril.name=Mithril Shears
+
+item.nukebase:helmAdamantine.name=Adamantine Helmet
+item.nukebase:chestAdamantine.name=Adamantine Chestplate
+item.nukebase:legsAdamantine.name=Adamantine Leggings
+item.nukebase:bootsAdamantine.name=Adamantine Boots
+item.nukebase:swordAdamantine.name=Adamantine Sword
+item.nukebase:pickAdamantine.name=Adamantine Pickaxe
+item.nukebase:axeAdamantine.name=Adamantine Axe
+item.nukebase:shovelAdamantine.name=Adamantine Shovel
+item.nukebase:hoeAdamantine.name=Adamantine Hoe
+item.nukebase:shearsAdamantine.name=Adamantine Shears
+
+item.nukebase:helmPrometheum.name=Prometheum Helmet
+item.nukebase:chestPrometheum.name=Prometheum Chestplate
+item.nukebase:legsPrometheum.name=Prometheum Leggings
+item.nukebase:bootsPrometheum.name=Prometheum Boots
+item.nukebase:swordPrometheum.name=Prometheum Sword
+item.nukebase:pickPrometheum.name=Prometheum Pickaxe
+item.nukebase:axePrometheum.name=Prometheum Axe
+item.nukebase:shovelPrometheum.name=Prometheum Shovel
+item.nukebase:hoePrometheum.name=Prometheum Hoe
+item.nukebase:shearsPrometheum.name=Prometheum Shears
+
+item.nukebase:helmOrichalcum.name=Orichalcum Helmet
+item.nukebase:chestOrichalcum.name=Orichalcum Chestplate
+item.nukebase:legsOrichalcum.name=Orichalcum Leggings
+item.nukebase:bootsOrichalcum.name=Orichalcum Boots
+item.nukebase:swordOrichalcum.name=Orichalcum Sword
+item.nukebase:pickOrichalcum.name=Orichalcum Pickaxe
+item.nukebase:axeOrichalcum.name=Orichalcum Axe
+item.nukebase:shovelOrichalcum.name=Orichalcum Shovel
+item.nukebase:hoeOrichalcum.name=Orichalcum Hoe
+item.nukebase:shearsOrichalcum.name=Orichalcum Shears
+
+item.nukebase:helmTerminium.name=Terminium Helmet
+item.nukebase:chestTerminium.name=Terminium Chestplate
+item.nukebase:legsTerminium.name=Terminium Leggings
+item.nukebase:bootsTerminium.name=Terminium Boots
+item.nukebase:swordTerminium.name=Terminium Sword
+item.nukebase:pickTerminium.name=Terminium Pickaxe
+item.nukebase:axeTerminium.name=Terminium Axe
+item.nukebase:shovelTerminium.name=Terminium Shovel
+item.nukebase:hoeTerminium.name=Terminium Hoe
+item.nukebase:shearsTerminium.name=Terminium Shears
+
+item.nukebase:helmAlumite.name=Alumite Helmet
+item.nukebase:chestAlumite.name=Alumite Chestplate
+item.nukebase:legsAlumite.name=Alumite Leggings
+item.nukebase:bootsAlumite.name=Alumite Boots
+item.nukebase:swordAlumite.name=Alumite Sword
+item.nukebase:pickAlumite.name=Alumite Pickaxe
+item.nukebase:axeAlumite.name=Alumite Axe
+item.nukebase:shovelAlumite.name=Alumite Shovel
+item.nukebase:hoeAlumite.name=Alumite Hoe
+item.nukebase:shearsAlumite.name=Alumite Shears
+
+item.nukebase:helmSteel.name=Steel Helmet
+item.nukebase:chestSteel.name=Steel Chestplate
+item.nukebase:legsSteel.name=Steel Leggings
+item.nukebase:bootsSteel.name=Steel Boots
+item.nukebase:swordSteel.name=Steel Sword
+item.nukebase:pickSteel.name=Steel Pickaxe
+item.nukebase:axeSteel.name=Steel Axe
+item.nukebase:shovelSteel.name=Steel Shovel
+item.nukebase:hoeSteel.name=Steel Hoe
+item.nukebase:shearsSteel.name=Steel Shears
+
+item.nukebase:helmStainlessSteel.name=Stainless Steel Helmet
+item.nukebase:chestStainlessSteel.name=Stainles sSteel Chestplate
+item.nukebase:legsStainlessSteel.name=Stainless Steel Leggings
+item.nukebase:bootsStainlessSteel.name=Stainless Steel Boots
+item.nukebase:swordStainlessSteel.name=Stainless Steel Sword
+item.nukebase:pickStainlessSteel.name=Stainless Steel Pickaxe
+item.nukebase:axeStainlessSteel.name=Stainless Steel Axe
+item.nukebase:shovelStainlessSteel.name=Stainless Steel Shovel
+item.nukebase:hoeStainlessSteel.name=Stainless Steel Hoe
+item.nukebase:shearsStainlessSteel.name=Stainless Steel Shears
+
+item.nukebase:helmDamascusSteel.name=Damascus Steel Helmet
+item.nukebase:chestDamascusSteel.name=Damascus Steel Chestplate
+item.nukebase:legsDamascusSteel.name=Damascus Steel Leggings
+item.nukebase:bootsDamascusSteel.name=Damascus Steel Boots
+item.nukebase:swordDamascusSteel.name=Damascus Steel Sword
+item.nukebase:pickDamascusSteel.name=Damascus Steel Pickaxe
+item.nukebase:axeDamascusSteel.name=Damascus Steel Axe
+item.nukebase:shovelDamascusSteel.name=Damascus Steel Shovel
+item.nukebase:hoeDamascusSteel.name=Damascus Steel Hoe
+item.nukebase:shearsDamascusSteel.name=Damascus Steel Shears
+
+item.nukebase:helmBlackSteel.name=Black Steel Helmet
+item.nukebase:chestBlackSteel.name=Black Steel Chestplate
+item.nukebase:legsBlackSteel.name=Black Steel Leggings
+item.nukebase:bootsBlackSteel.name=Black Steel Boots
+item.nukebase:swordBlackSteel.name=Black Steel Sword
+item.nukebase:pickBlackSteel.name=Black Steel Pickaxe
+item.nukebase:axeBlackSteel.name=Black Steel Axe
+item.nukebase:shovelBlackSteel.name=Black Steel Shovel
+item.nukebase:hoeBlackSteel.name=Black Steel Hoe
+item.nukebase:shearsBlackSteel.name=Black Steel Shears
+
+item.nukebase:helmTearSteel.name=Tear Steel Helmet
+item.nukebase:chestTearSteel.name=Tear Steel Chestplate
+item.nukebase:legsTearSteel.name=Tear Steel Leggings
+item.nukebase:bootsTearSteel.name=Tear Steel Boots
+item.nukebase:swordTearSteel.name=Tear Steel Sword
+item.nukebase:pickTearSteel.name=Tear Steel Pickaxe
+item.nukebase:axeTearSteel.name=Tear Steel Axe
+item.nukebase:shovelTearSteel.name=Tear Steel Shovel
+item.nukebase:hoeTearSteel.name=Tear Steel Hoe
+item.nukebase:shearsTearSteel.name=Tear Steel Shears
+
+item.nukebase:helmBlueSteel.name=Blue Steel Helmet
+item.nukebase:chestBlueSteel.name=Blue Steel Chestplate
+item.nukebase:legsBlueSteel.name=Blue Steel Leggings
+item.nukebase:bootsBlueSteel.name=Blue Steel Boots
+item.nukebase:swordBlueSteel.name=Blue Steel Sword
+item.nukebase:pickBlueSteel.name=Blue Steel Pickaxe
+item.nukebase:axeBlueSteel.name=Blue Steel Axe
+item.nukebase:shovelBlueSteel.name=Blue Steel Shovel
+item.nukebase:hoeBlueSteel.name=Blue Steel Hoe
+item.nukebase:shearsBlueSteel.name=Blue Steel Shears
+
+item.nukebase:helmRedSteel.name=Red Steel Helmet
+item.nukebase:chestRedSteel.name=Red Steel Chestplate
+item.nukebase:legsRedSteel.name=Red Steel Leggings
+item.nukebase:bootsRedSteel.name=Red Steel Boots
+item.nukebase:swordRedSteel.name=Red Steel Sword
+item.nukebase:pickRedSteel.name=Red Steel Pickaxe
+item.nukebase:axeRedSteel.name=Red Steel Axe
+item.nukebase:shovelRedSteel.name=Red Steel Shovel
+item.nukebase:hoeRedSteel.name=Red Steel Hoe
+item.nukebase:shearsRedSteel.name=Red Steel Shears
+
+item.nukebase:helmInvar.name=Invar Helmet
+item.nukebase:chestInvar.name=Invar Chestplate
+item.nukebase:legsInvar.name=Invar Leggings
+item.nukebase:bootsInvar.name=Invar Boots
+item.nukebase:swordInvar.name=Invar Sword
+item.nukebase:pickInvar.name=Invar Pickaxe
+item.nukebase:axeInvar.name=Invar Axe
+item.nukebase:shovelInvar.name=Invar Shovel
+item.nukebase:hoeInvar.name=Invar Hoe
+item.nukebase:shearsInvar.name=Invar Shears
+
+item.nukebase:helmBismuthBrass.name=Bismuth Brass Helmet
+item.nukebase:chestBismuthBrass.name=Bismuth Brass Chestplate
+item.nukebase:legsBismuthBrass.name=Bismuth Brass Leggings
+item.nukebase:bootsBismuthBrass.name=Bismuth Brass Boots
+item.nukebase:swordBismuthBrass.name=Bismuth Brass Sword
+item.nukebase:pickBismuthBrass.name=Bismuth Brass Pickaxe
+item.nukebase:axeBismuthBrass.name=Bismuth Brass Axe
+item.nukebase:shovelBismuthBrass.name=Bismuth Brass Shovel
+item.nukebase:hoeBismuthBrass.name=Bismuth Brass Hoe
+item.nukebase:shearsBismuthBrass.name=Bismuth Brass Shears
+
+item.nukebase:helmBronze.name=Bronze Helmet
+item.nukebase:chestBronze.name=Bronze Chestplate
+item.nukebase:legsBronze.name=Bronze Leggings
+item.nukebase:bootsBronze.name=Bronze Boots
+item.nukebase:swordBronze.name=Bronze Sword
+item.nukebase:pickBronze.name=Bronze Pickaxe
+item.nukebase:axeBronze.name=Bronze Axe
+item.nukebase:shovelBronze.name=Bronze Shovel
+item.nukebase:hoeBronze.name=Bronze Hoe
+item.nukebase:shearsBronze.name=Bronze Shears
+
+item.nukebase:helmBlackBronze.name=Black Bronze Helmet
+item.nukebase:chestBlackBronze.name=Black Bronze Chestplate
+item.nukebase:legsBlackBronze.name=Black Bronze Leggings
+item.nukebase:bootsBlackBronze.name=Black Bronze Boots
+item.nukebase:swordBlackBronze.name=Black Bronze Sword
+item.nukebase:pickBlackBronze.name=Black Bronze Pickaxe
+item.nukebase:axeBlackBronze.name=Black Bronze Axe
+item.nukebase:shovelBlackBronze.name=Black Bronze Shovel
+item.nukebase:hoeBlackBronze.name=Black Bronze Hoe
+item.nukebase:shearsBlackBronze.name=Black Bronze Shears
+
+item.nukebase:helmMithrilBronze.name=Mithril Bronze Helmet
+item.nukebase:chestMithrilBronze.name=Mithril Bronze Chestplate
+item.nukebase:legsMithrilBronze.name=Mithril Bronze Leggings
+item.nukebase:bootsMithrilBronze.name=Mithril Bronze Boots
+item.nukebase:swordMithrilBronze.name=Mithril Bronze Sword
+item.nukebase:pickMithrilBronze.name=Mithril Bronze Pickaxe
+item.nukebase:axeMithrilBronze.name=Mithril Bronze Axe
+item.nukebase:shovelMithrilBronze.name=Mithril Bronze Shovel
+item.nukebase:hoeMithrilBronze.name=Mithril Bronze Hoe
+item.nukebase:shearsMithrilBronze.name=Mithril Bronze Shears
+
+item.nukebase:helmSignalum.name=Signalum Helmet
+item.nukebase:chestSignalum.name=Signalum Chestplate
+item.nukebase:legsSignalum.name=Signalum Leggings
+item.nukebase:bootsSignalum.name=Signalum Boots
+item.nukebase:swordSignalum.name=Signalum Sword
+item.nukebase:pickSignalum.name=Signalum Pickaxe
+item.nukebase:axeSignalum.name=Signalum Axe
+item.nukebase:shovelSignalum.name=Signalum Shovel
+item.nukebase:hoeSignalum.name=Signalum Hoe
+item.nukebase:shearsSignalum.name=Signalum Shears
+
+item.nukebase:helmVibranium.name=Vibranium Helmet
+item.nukebase:chestVibranium.name=Vibranium Chestplate
+item.nukebase:legsVibranium.name=Vibranium Leggings
+item.nukebase:bootsVibranium.name=Vibranium Boots
+item.nukebase:swordVibranium.name=Vibranium Sword
+item.nukebase:pickVibranium.name=Vibranium Pickaxe
+item.nukebase:axeVibranium.name=Vibranium Axe
+item.nukebase:shovelVibranium.name=Vibranium Shovel
+item.nukebase:hoeVibranium.name=Vibranium Hoe
+item.nukebase:shearsVibranium.name=Vibranium Shears
+
+item.nukebase:helmElectrum.name=Electrum Helmet
+item.nukebase:chestElectrum.name=Electrum Chestplate
+item.nukebase:legsElectrum.name=Electrum Leggings
+item.nukebase:bootsElectrum.name=Electrum Boots
+item.nukebase:swordElectrum.name=Electrum Sword
+item.nukebase:pickElectrum.name=Electrum Pickaxe
+item.nukebase:axeElectrum.name=Electrum Axe
+item.nukebase:shovelElectrum.name=Electrum Shovel
+item.nukebase:hoeElectrum.name=Electrum Hoe
+item.nukebase:shearsElectrum.name=Electrum Shears
+
+item.nukebase:helmLumium.name=Lumium Helmet
+item.nukebase:chestLumium.name=Lumium Chestplate
+item.nukebase:legsLumium.name=Lumium Leggings
+item.nukebase:bootsLumium.name=Lumium Boots
+item.nukebase:swordLumium.name=Lumium Sword
+item.nukebase:pickLumium.name=Lumium Pickaxe
+item.nukebase:axeLumium.name=Lumium Axe
+item.nukebase:shovelLumium.name=Lumium Shovel
+item.nukebase:hoeLumium.name=Lumium Hoe
+item.nukebase:shearsLumium.name=Lumium Shears
+
+item.nukebase:helmEnderium.name=Enderium Helmet
+item.nukebase:chestEnderium.name=Enderium Chestplate
+item.nukebase:legsEnderium.name=Enderium Leggings
+item.nukebase:bootsEnderium.name=Enderium Boots
+item.nukebase:swordEnderium.name=Enderium Sword
+item.nukebase:pickEnderium.name=Enderium Pickaxe
+item.nukebase:axeEnderium.name=Enderium Axe
+item.nukebase:shovelEnderium.name=Enderium Shovel
+item.nukebase:hoeEnderium.name=Enderium Hoe
+item.nukebase:shearsEnderium.name=Enderium Shears
+
+item.nukebase:helmTeslium.name=Teslium Helmet
+item.nukebase:chestTeslium.name=Teslium Chestplate
+item.nukebase:legsTeslium.name=Teslium Leggings
+item.nukebase:bootsTeslium.name=Teslium Boots
+item.nukebase:swordTeslium.name=Teslium Sword
+item.nukebase:pickTeslium.name=Teslium Pickaxe
+item.nukebase:axeTeslium.name=Teslium Axe
+item.nukebase:shovelTeslium.name=Teslium Shovel
+item.nukebase:hoeTeslium.name=Teslium Hoe
+item.nukebase:shearsTeslium.name=Teslium Shears
+
+item.nukebase:helmTungstenSteel.name=Tungsten Steel Helmet
+item.nukebase:chestTungstenSteel.name=Tungsten Steel Chestplate
+item.nukebase:legsTungstenSteel.name=Tungsten Steel Leggings
+item.nukebase:bootsTungstenSteel.name=Tungsten Steel Boots
+item.nukebase:swordTungstenSteel.name=Tungsten Steel Sword
+item.nukebase:pickTungstenSteel.name=Tungsten Steel Pickaxe
+item.nukebase:axeTungstenSteel.name=Tungsten Steel Axe
+item.nukebase:shovelTungstenSteel.name=Tungsten Steel Shovel
+item.nukebase:hoeTungstenSteel.name=Tungsten Steel Hoe
+item.nukebase:shearsTungstenSteel.name=Tungsten Steel Shears
+
+item.nukebase:helmEmerald.name=Emerald Helmet
+item.nukebase:chestEmerald.name=Emerald Chestplate
+item.nukebase:legsEmerald.name=Emerald Leggings
+item.nukebase:bootsEmerald.name=Emerald Boots
+item.nukebase:swordEmerald.name=Emerald Sword
+item.nukebase:pickEmerald.name=Emerald Pickaxe
+item.nukebase:axeEmerald.name=Emerald Axe
+item.nukebase:shovelEmerald.name=Emerald Shovel
+item.nukebase:hoeEmerald.name=Emerald Hoe
+item.nukebase:shearsEmerald.name=Emerald Shears
+
+item.nukebase:helmSapphire.name=Sapphire Helmet
+item.nukebase:chestSapphire.name=Sapphire Chestplate
+item.nukebase:legsSapphire.name=Sapphire Leggings
+item.nukebase:bootsSapphire.name=Sapphire Boots
+item.nukebase:swordSapphire.name=Sapphire Sword
+item.nukebase:pickSapphire.name=Sapphire Pickaxe
+item.nukebase:axeSapphire.name=Sapphire Axe
+item.nukebase:shovelSapphire.name=Sapphire Shovel
+item.nukebase:hoeSapphire.name=Sapphire Hoe
+item.nukebase:shearsSapphire.name=Sapphire Shears
+
+item.nukebase:helmAmethyst.name=Amethyst Helmet
+item.nukebase:chestAmethyst.name=Amethyst Chestplate
+item.nukebase:legsAmethyst.name=Amethyst Leggings
+item.nukebase:bootsAmethyst.name=Amethyst Boots
+item.nukebase:swordAmethyst.name=Amethyst Sword
+item.nukebase:pickAmethyst.name=Amethyst Pickaxe
+item.nukebase:axeAmethyst.name=Amethyst Axe
+item.nukebase:shovelAmethyst.name=Amethyst Shovel
+item.nukebase:hoeAmethyst.name=Amethyst Hoe
+item.nukebase:shearsAmethyst.name=Amethyst Shears
+
+item.nukebase:helmRuby.name=Ruby Helmet
+item.nukebase:chestRuby.name=Ruby Chestplate
+item.nukebase:legsRuby.name=Ruby Leggings
+item.nukebase:bootsRuby.name=Ruby Boots
+item.nukebase:swordRuby.name=Ruby Sword
+item.nukebase:pickRuby.name=Ruby Pickaxe
+item.nukebase:axeRuby.name=Ruby Axe
+item.nukebase:shovelRuby.name=Ruby Shovel
+item.nukebase:hoeRuby.name=Ruby Hoe
+item.nukebase:shearsRuby.name=Ruby Shears
+
+item.nukebase:helmTigerEye.name=Tiger's Eye Helmet
+item.nukebase:chestTigerEye.name=Tiger's Eye Chestplate
+item.nukebase:legsTigerEye.name=Tiger's Eye Leggings
+item.nukebase:bootsTigerEye.name=Tiger's Eye Boots
+item.nukebase:swordTigerEye.name=Tiger's Eye Sword
+item.nukebase:pickTigerEye.name=Tiger's Eye Pickaxe
+item.nukebase:axeTigerEye.name=Tiger's Eye Axe
+item.nukebase:shovelTigerEye.name=Tiger's Eye Shovel
+item.nukebase:hoeTigerEye.name=Tiger's Eye Hoe
+item.nukebase:shearsTigerEye.name=Tiger's Eye Shears
+
+item.nukebase:swordObsidian.name= Obsidian Sword
+item.nukebase:pickObsidian.name= Obsidian Pickaxe
+item.nukebase:axeObsidian.name= Obsidian Axe
+item.nukebase:shovelObsidian.name= Obsidian Shovel
+item.nukebase:hoeObsidian.name= Obsidian Hoe
+item.nukebase:shearsObsidian.name= Obsidian Shears
+
+item.nukebase:swordUranium.name= Uranium Sword
+item.nukebase:pickUranium.name= Uranium Pickaxe
+item.nukebase:axeUranium.name= Uranium Axe
+item.nukebase:shovelUranium.name= Uranium Shovel
+item.nukebase:hoeUranium.name= Uranium Hoe
+
+item.nukebase:swordBlazonium.name= Blazonium Sword
+item.nukebase:pickBlazonium.name= Blazonium Pickaxe
+item.nukebase:axeBlazonium.name= Blazonium Axe
+item.nukebase:shovelBlazonium.name= Blazonium Shovel
+item.nukebase:hoeBlazonium.name= Blazonium Hoe
+item.nukebase:shearsBlazonium.name= Blazonium Shears
+
+item.nukebase:swordStellite.name= Stellite Sword
+item.nukebase:pickStellite.name= Stellite Pickaxe
+item.nukebase:axeStellite.name= Stellite Axe
+item.nukebase:shovelStellite.name= Stellite Shovel
+item.nukebase:hoeStellite.name= Stellite Hoe
+item.nukebase:shearsStellite.name= Stellite Shears

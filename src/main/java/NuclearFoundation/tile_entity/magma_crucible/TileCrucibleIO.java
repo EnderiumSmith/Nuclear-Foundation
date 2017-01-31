@@ -39,8 +39,8 @@ public class TileCrucibleIO extends TileEntity implements IMagmaCrucibleStructur
 	}
 	@Override
 	public void update() {
-		if(!this.worldObj.isRemote){
-			if(type==0&&master.getY()==this.pos.getY()){
+		/*if(!this.worldObj.isRemote){
+			if(type==0&&master!=null&&master.getY()==this.pos.getY()){
 				TileCrucibleController tile=(TileCrucibleController)this.worldObj.getTileEntity(master);
 				if(tile.isFormed){
 					EnumFacing[] neighbors=EnumFacing.VALUES;
@@ -56,7 +56,7 @@ public class TileCrucibleIO extends TileEntity implements IMagmaCrucibleStructur
 					}
 				}
 			}
-		}
+		}*/
 		
 	}
 	@Override

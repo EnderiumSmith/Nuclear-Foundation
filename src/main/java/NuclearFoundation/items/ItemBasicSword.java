@@ -5,9 +5,13 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 import NuclearFoundation.core.Constants;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -89,6 +93,12 @@ public class ItemBasicSword extends ItemSword{
 			tooltip.add(ChatFormatting.DARK_PURPLE+"Psycho Cut");
 			if(GuiScreen.isShiftKeyDown()){
 				tooltip.add(ChatFormatting.DARK_PURPLE+"Extra damage to psychic/ender creatures");
+			}
+		}
+		if(((ItemSword)stack.getItem()).getToolMaterialName().equals("Terminium")){
+			tooltip.add(ChatFormatting.DARK_PURPLE+"Ender Pulse");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.DARK_PURPLE+"Teleports hit entitys");
 			}
 		}
 	}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "nukebase:blocks/grindstone_down",
+    "down": "nukebase:blocks/grindstone_down",
+    "up": "nukebase:blocks/grindstone_top",
+    "east": "nukebase:blocks/grindstone_side",
+    "west": "nukebase:blocks/grindstone_side",
+    "north": "nukebase:blocks/grindstone_front",
+    "south": "nukebase:blocks/grindstone_side"
+  }
+}

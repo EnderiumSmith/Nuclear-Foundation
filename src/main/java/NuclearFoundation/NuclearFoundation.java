@@ -2,6 +2,7 @@ package NuclearFoundation;
 
 import NuclearFoundation.core.CommonProxy;
 import NuclearFoundation.core.Constants;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -12,6 +13,10 @@ import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
 @Mod(modid=Constants.MODID, name=Constants.MODNAME, version=Constants.VERSION)
 public class NuclearFoundation {
+	
+	static{
+		FluidRegistry.enableUniversalBucket();
+	}
 	
 	@Mod.Instance
 	public static NuclearFoundation instance;

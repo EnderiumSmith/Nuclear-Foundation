@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "normal":{
+		"model":"nukebase:baseblock",
+		"textures":{
+			"top":"minecraft:blocks/obsidian",
+			"bottom":"minecraft:blocks/obsidian",
+			"side":"nukebase:blocks/blazonium_bits"
+		}
+	 }
+    }
+}

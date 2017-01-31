@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "nukebase:blocks/stirling_side",
+    "down": "nukebase:blocks/stirling_side",
+    "up": "nukebase:blocks/stirling_side",
+    "east": "nukebase:blocks/stirling_side",
+    "west": "nukebase:blocks/stirling_side",
+    "north": "nukebase:blocks/stirling_front",
+    "south": "nukebase:blocks/stirling_side"
+  }
+}

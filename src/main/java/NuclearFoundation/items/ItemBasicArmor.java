@@ -94,6 +94,13 @@ public class ItemBasicArmor extends ItemArmor{
 				tooltip.add(ChatFormatting.DARK_PURPLE+"Redirects up to 40% of psychic/ender damage");
 			}
 		}
+		if(((ItemArmor)stack.getItem()).getArmorMaterial()==ArmorMaterials.Terminium){
+			tooltip.add(ChatFormatting.DARK_PURPLE+"Ender Field");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.DARK_PURPLE+"Up to 100% chance to teleport on damage");
+				tooltip.add(ChatFormatting.DARK_PURPLE+"Boots cancel ender pearl damage");
+			}
+		}
 	}
 	/*@Override
 	public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot) {

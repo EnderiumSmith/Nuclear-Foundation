@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "nukebase:blocks/crucible_side",
+    "down": "nukebase:blocks/crucible_bottom",
+    "up": "nukebase:blocks/crucible_top",
+    "east": "nukebase:blocks/crucible_side",
+    "west": "nukebase:blocks/crucible_side",
+    "north": "nukebase:blocks/crucible_side",
+    "south": "nukebase:blocks/crucible_side"
+  }
+}

@@ -21,6 +21,7 @@ public class Config {
 	public static int IngotPerNugget=1;
 	public static int NuggetPerIngot=9;
 	public static int MaxGreed=4;
+	public static boolean TreatUnknownAsOverwold=false;
 	//ores
 	public static int Bauxite=10;
 	public static int Ilmenite=2;
@@ -70,6 +71,7 @@ public class Config {
 	}
 	private static void initGeneralConfig(Configuration cfg){
 		cfg.addCustomCategoryComment(CATEGORY_GENERAL, "General configuration");
+		TreatUnknownAsOverwold=cfg.getBoolean("treatUnknownAsOverwold", CATEGORY_GENERAL, false, "Should unknown dimension provide overwold air?");
 		PlatePerIngot=cfg.getInt("platePerIngot", CATEGORY_GENERAL, 2, 1, 64, "How many plates are produced for the amount of ingots above");
 		GearPerIngot=cfg.getInt("gearPerIngot", CATEGORY_GENERAL, 1, 1, 64, "How many gears are produced for the amount of ingots above");
 		RodPerIngot=cfg.getInt("rodPerIngot", CATEGORY_GENERAL, 4, 1, 64, "How many rods are produced for the amount of ingots above");

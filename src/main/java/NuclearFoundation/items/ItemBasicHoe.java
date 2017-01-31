@@ -92,6 +92,12 @@ public class ItemBasicHoe extends ItemHoe{
 				tooltip.add(ChatFormatting.DARK_PURPLE+"Extra damage to psychic/ender creatures");
 			}
 		}
+		if(((ItemHoe)stack.getItem()).getMaterialName().equals("Terminium")){
+			tooltip.add(ChatFormatting.DARK_PURPLE+"Ender Pulse");
+			if(GuiScreen.isShiftKeyDown()){
+				tooltip.add(ChatFormatting.DARK_PURPLE+"Teleports hit entitys");
+			}
+		}
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel(){

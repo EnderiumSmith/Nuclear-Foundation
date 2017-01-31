@@ -9,10 +9,13 @@ import NuclearFoundation.crafting.GrindStoneCrafting;
 import NuclearFoundation.crafting.ItemCrafting;
 import NuclearFoundation.crafting.MagmaCrafting;
 import NuclearFoundation.crafting.ToolCrafting;
+import NuclearFoundation.fluids.AirManager;
 import NuclearFoundation.fluids.FluidManager;
 import NuclearFoundation.items.ItemRegistry;
 import NuclearFoundation.networking.HandlerMetalWorker;
 import NuclearFoundation.networking.MessageMetalWorker;
+import NuclearFoundation.tile_entity.TileAtmosphericVent;
+import NuclearFoundation.tile_entity.TileCryogenicCompressor;
 import NuclearFoundation.tile_entity.TileGrindstone;
 import NuclearFoundation.tile_entity.TileMetalworker;
 import NuclearFoundation.tile_entity.TileStirlingGenerator;
@@ -44,6 +47,10 @@ public class CommonProxy {
 		BlockRegistry.registerBlocks();
 		BlockRegistry.initOredict();
 		FluidManager.registerFluids();
+		FluidManager.registerBuckets();
+		FluidManager.registerFluidBlocks();
+		FluidManager.registerAirComposition();
+		AirManager.initCryoMap();
 		PotionRegistry.init();
 		//ModBlocks.init();
 		GameRegistry.registerTileEntity(TileGrindstone.class, Constants.MODID+":TileGrindstone");
@@ -51,6 +58,8 @@ public class CommonProxy {
 		GameRegistry.registerTileEntity(TileStirlingGenerator.class, Constants.MODID+":TileStirlingGenerator");
 		GameRegistry.registerTileEntity(TileCrucibleController.class, Constants.MODID+":TileCrucibleController");
 		GameRegistry.registerTileEntity(TileCrucibleIO.class, Constants.MODID+":TileCrucibleIO");
+		GameRegistry.registerTileEntity(TileAtmosphericVent.class, Constants.MODID+"TileAtmosphericVent");
+		GameRegistry.registerTileEntity(TileCryogenicCompressor.class, Constants.MODID+"TileCryogenicCompressor");
 	}
 	public void init(FMLInitializationEvent e){
 		ToolCrafting.init();

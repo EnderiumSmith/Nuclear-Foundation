@@ -61,7 +61,7 @@ public class MetalColorizer {
 		case("RoseGold"):return 0xf1c4c4;
 		case("Nichrome"):return 0xfffce1;
 		case("Arsenic"):return 0x909090;
-		case("RedNik"):return 0xff00ff;
+		case("RedNik"):return 0xff00a2;
 		case("WeakAlumite"):return 0xffa3f7;
 		case("WeakStainlessSteel"):return 0xc0c0c0;
 		case("WeakBlackSteel"):return 0x1b1b1b;
